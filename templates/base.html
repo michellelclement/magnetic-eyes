@@ -17,6 +17,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -37,13 +38,10 @@
   </button>
     
     <!-- Main Nav Items -->
-    <div class="col-md-4 collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <div class="col-4 collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav justify-content-start mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link" href="#">Shop</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Subscribe</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -57,20 +55,25 @@
     </ul>
     </div>
     <!-- Logo -->
-    <div class="col-md-4">
+    <div class="col-md-4 text-center">
         <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03"></div>
     </div>
     <!-- Cart & Dropdown -->
     <div class="col-md-4">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul class="navbar-nav justify-content-end mr-auto mt-2 mt-lg-0">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign In / Register</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Sign In</a>
-                <a class="dropdown-item" href="#">Register</a>
-            </div>      
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Register</a>
+                                <a href="#" class="dropdown-item">Login</a>
+                        </div>
         </li>
         <li class="nav-item">
             <a class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
