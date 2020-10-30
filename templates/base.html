@@ -10,7 +10,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    {% endblock %} {% block corecss %}
+    {% endblock %} 
+    
+    {% block corecss %}
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -24,6 +26,7 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     {% endblock %}
 
     <title>Magnetic Eyes Lashes</title>
@@ -94,7 +97,10 @@
 
     {% if messages %}
     <div></div>
-    {% endif %} {% block content %} {% endblock %}
+    {% endif %} 
+    
+    {% block content %} 
+    {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

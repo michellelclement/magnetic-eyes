@@ -1,0 +1,17 @@
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: red;
+    color: #282828;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.navbar-brand {
+    letter-spacing: 5.6px;
+    font-size: 28px;
+}
