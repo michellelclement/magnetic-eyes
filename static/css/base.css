@@ -59,3 +59,13 @@ h4 {
   border: none;
   background: transparent;
 }
+
+
+/* About Section */
+.about-container {
+    margin: 50px;
+}
+
+.about-image {
+    width: 400px;
+}
