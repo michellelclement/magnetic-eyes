@@ -1,17 +1,49 @@
 html,
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: red;
+    background-color: #F9F9F9;
     color: #282828;
+    size: 16px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1,
 h2,
-h3 {
+h4 {
     font-family: 'Permanent Marker', cursive;
 }
 
+/* Nav Bar */
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
 }
+
+.nav-item {
+    font-size: 16px;
+    color: #282828;
+}
+
+/* Homepage */
+.jumbotron-section {
+    background: url('/media/homepage-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 80vh;
+    color: white;
+}
+
+.jumbotron-content {
+    background-color: transparent;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.intro-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px 50px;
+}
+
+
