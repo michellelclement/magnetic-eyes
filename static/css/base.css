@@ -40,10 +40,22 @@ h4 {
     
 }
 
-.intro-container {
+.intro-row {
     padding-top: 50px;
     padding-bottom: 50px;
-    margin: 50px 50px;
+    margin: 50px;
 }
 
+/* Products Section */
+.products-row-title {
+    margin: 50px;
+    padding-top: 50px; 
+}
 
+.products-row {
+    margin: 50px;
+}
+.card {
+  border: none;
+  background: transparent;
+}

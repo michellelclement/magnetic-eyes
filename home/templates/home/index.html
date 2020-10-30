@@ -1,61 +1,117 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock%} {% block content %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container jumbotron-section">
-      <div class="row">
-        <div class="col-12">
-          <div class="jumbotron jumbotron-content text-center">
-            <h1 class="display-4">NO GLUE FALSE EYELASHES</h1>
-            <h3 class="lead">
-              We know, we can't use glue on lashes either.
-            </h3>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron jumbotron-content text-center">
+        <h1 class="display-4">NO GLUE FALSE EYELASHES</h1>
+        <h3 class="lead">We know, we can't use glue on lashes either.</h3>
       </div>
     </div>
+  </div>
+</div>
 
 <!-- Intro Section -->
 
 <div class="container">
-<div class="row intro-container">
-<div class="col-12">
-Do you struggle to apply glue on lashes? Or simply looking for a no glue, fake eyelash alternative? <br><br>
-We feel you. This is why we started Magnetic Eyes, the lash brand that has been created by people that can’t use glue on lashes!<br><br>
-Magnetic Eyes use tiny magnets to fix the lashes in place. Not a blob of glue in sight.​
-</div>
-</div>
+  <div class="row intro-row">
+    <div class="col-12">
+      Do you struggle to apply glue on lashes? Or simply looking for a no glue,
+      fake eyelash alternative? <br /><br />
+      We feel you. This is why we started Magnetic Eyes, the lash brand that has
+      been created by people that can’t use glue on lashes!<br /><br />
+      Magnetic Eyes use tiny magnets to fix the lashes in place. Not a blob of
+      glue in sight.​
+    </div>
+  </div>
 </div>
 
 <!-- Products Section -->
 <div class="container">
-<div class="row">
-<div class="col">
-<h2>Shop for Magnetic Lashes</h2>
-</div>
-</div>
+  <div class="row products-row-title">
+    <div class="col">
+      <h2>Shop for Magnetic Lashes</h2>
+    </div>
+  </div>
 </div>
 
 <div class="container">
 <div class="row">
-<div class="col-4">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="url('/media/drama.jpg')" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">DRAMA</h4>
-    <p class="card-text">Double Magnet Lash</p>
-    <p class="card-text">£12.99</p>
-    <a href="#" class="btn btn-primary">Shop DRAMA</a>
-  </div>
+    <!-- Card 1 -->
+    <div class="col">
+        <div class="card" style="width: 18rem">
+            <img
+            class="card-img-top"
+            src="/media/drama.png"
+            alt="Drama eyelash product image"
+            />
+            <div class="card-body">
+                <h4 class="card-title">DRAMA</h4>
+                <p class="card-text">Double Magnet Lash</p>
+                <p class="card-text">£12.99</p>
+                <a href="#" class="btn btn-primary">Shop DRAMA</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col">
+        <div class="card" style="width: 18rem">
+            <img
+            class="card-img-top"
+            src="/media/drama.png"
+            alt="Drama eyelash product image"
+            />
+            <div class="card-body">
+                <h4 class="card-title">DRAMA</h4>
+                <p class="card-text">Double Magnet Lash</p>
+                <p class="card-text">£12.99</p>
+                <a href="#" class="btn btn-primary">Shop DRAMA</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col">
+        <div class="card" style="width: 18rem">
+            <img
+            class="card-img-top"
+            src="/media/drama.png"
+            alt="Drama eyelash product image"
+            />
+            <div class="card-body">
+                <h4 class="card-title">DRAMA</h4>
+                <p class="card-text">Double Magnet Lash</p>
+                <p class="card-text">£12.99</p>
+                <a href="#" class="btn btn-primary">Shop DRAMA</a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
-</div>
-</div>
-</div>
+<!-- What section -->
+<section>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>What are Mangetic Eyes Lashes?</h2>
+            <p>
+            Bespoke magnetic lash design<br>
+            Long lasting, multiple uses<br>
+            Never run out of eyelash glue<br>
+            No chemicals near the eye<br>
+            No damage to natural lashes<br>
+            Lightweight<br>
+            Easy application and gentle to remove<br>
+            Perfect for those with allergies<br>
+            Cruelty free
+            </p>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
+
