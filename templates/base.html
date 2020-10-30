@@ -17,52 +17,77 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     {% endblock %}
 
     <title>Magnetic Eyes Lashes</title>
   </head>
   <body>
     <header>
-    <div class="row">
-    <div class="col">
-
-    </div>
-
-    <div class="col-2 text-center">
-    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-    <h1>MAGNETIC EYES</h1>
-    </a>
+    <!-- Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Toggler Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     
-    </div>
-    <div class="col">
-    </div>
-    
-    <ul>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sign In / Register</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-    </div>
-  </li>
-  <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-
+    <!-- Main Nav Items -->
+    <div class="col-md-4 collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Subscribe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Application</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
     </ul>
     </div>
-    </header>
+    <!-- Logo -->
+    <div class="col-md-4">
+        <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    </div>
+    </div>
+    <!-- Cart & Dropdown -->
+    <div class="col-md-4">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign In / Register</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Sign In</a>
+                <a class="dropdown-item" href="#">Register</a>
+            </div>      
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <div class="text-center">
+                <div>
+                    <i class="fas fa-shopping-bag fa-lg"></i>
+                </div>
+                    <p class="my-0">
+                        {% if grand_total %}${{ grand_total|floatformat:2 }}{% else %}£0.00{% endif %}
+                    </p>
+            </div>
+            </a>
+        </li>
+        </ul>
+    </div>
+</nav>
+</header>
 
     {% if messages %}
     <div></div>
@@ -86,16 +111,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    {% endblock %} 
-    
-    {% block extrameta %} 
-    {% endblock %} 
-
-    {% block extracss %} 
-    {% endblock %} 
-
-    {% block extrajs %} 
-    {% endblock %}
-    
+    {% endblock %} {% block extrameta %} {% endblock %} {% block extracss %} 
+    {% endblock %} {% block extrajs %} {% endblock %}
   </body>
 </html>
