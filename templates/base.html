@@ -10,144 +10,155 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    {% endblock %} 
-    
-    {% block corecss %}
+    {% endblock %} {% block corecss %}
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
 
     <title>Magnetic Eyes Lashes</title>
   </head>
   <body>
     <header>
-    <!-- Nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Toggler Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    
-    <!-- Main Nav Items -->
-    <div class="col-4 collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav justify-content-start">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Application</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
-    </div>
-    <!-- Logo -->
-    <div class="col-md-4 text-center">
-        <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03"></div>
-    </div>
-    <!-- Cart & Dropdown -->
-    <div class="col-md-4">
-        <ul class="navbar-nav justify-content-end">
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="#" class="dropdown-item">Register</a>
-                                <a href="#" class="dropdown-item">Login</a>
-                        </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-            <div class="text-center">
-                <div>
-                    <i class="fas fa-shopping-bag fa-lg"></i>
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Toggler Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main Nav Items -->
+        <div class="col-4 collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav justify-content-start">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Application</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Logo -->
+        <div class="col-md-4 text-center">
+          <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
+        </div>
+        <!-- Cart & Dropdown -->
+        <div class="col-md-4">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="user-options"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
                 </div>
-                    <p class="my-0">
-                        {% if grand_total %}${{ grand_total|floatformat:2 }}{% else %}£0.00{% endif %}
-                    </p>
-            </div>
-            </a>
-        </li>
-        </ul>
-    </div>
-</nav>
-</header>
+              </a>
+              <div
+                class="dropdown-menu border-0"
+                aria-labelledby="user-options"
+              >
+                <a href="" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">Register</a>
+                <a href="#" class="dropdown-item">Login</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                href=""
+              >
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-shopping-bag fa-lg"></i>
+                  </div>
+                  <p class="my-0">
+                    {% if grand_total %}${{ grand_total|floatformat:2 }}{% else
+                    %}£0.00{% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     {% if messages %}
     <div></div>
-    {% endif %} 
-    
-    {% block content %} 
-    {% endblock %}
+    {% endif %} {% block content %} {% endblock %}
 
-<footer>
-    <div class="container-fluid footer-container">
-        
-        <div class="row text-center">
-            <div class="col">
-                    <a class="footer-logo navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
-            </div>
+    <footer>
+
+        <div class="container-fluid footer-container text-center">
+            <div class="footer-logo">MAGNETIC EYES</div>
+
+        <div class="row">
+          <div class="col">
+            <ul class="list-inline social-links">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitter.com/" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="row text-center">
-            <div class="col">
-                <ul class="list-inline social-links">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/" target="_blank">
-                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                        <span class="sr-only">Facebook</span>
-                    </li>
-
-
-                    <li class="list-inline-item">
-                        <a href="https://www.twitter.com/" target="_blank">
-                        <i class="fab fa-twitter" aria-hidden="true"></i>
-                        <span class="sr-only">Twitter</span>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/" target="_blank">
-                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                        <span class="sr-only">Instagram</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row text-center">
-            <div class="col">
-                <p>
+        <div class="row">
+          <div class="col">
+            <p>
               Copyright Michelle L Clement 2020 | Website Designed & Built by
               Michelle L Clement
-                </p>
-            </div>
+            </p>
+          </div>
         </div>
+      </div>
 
-    </div>
-</footer>
-
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
