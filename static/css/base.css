@@ -14,6 +14,14 @@ h4 {
     font-family: 'Permanent Marker', cursive;
 }
 
+/* Buttons */
+
+.btn-primary {
+    background-color: #FFE902;
+    border: none;
+    color: #282828;
+}
+
 /* Nav Bar */
 .navbar-brand {
     letter-spacing: 5.6px;
