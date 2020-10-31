@@ -102,6 +102,53 @@
     {% block content %} 
     {% endblock %}
 
+<footer>
+    <div class="container-fluid footer-container">
+        
+        <div class="row text-center">
+            <div class="col">
+                    <a class="footer-logo navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </li>
+
+
+                    <li class="list-inline-item">
+                        <a href="https://www.twitter.com/" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twitter</span>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <p>
+              Copyright Michelle L Clement 2020 | Website Designed & Built by
+              Michelle L Clement
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     {% block corejs %}
