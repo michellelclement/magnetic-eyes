@@ -35,9 +35,7 @@ h4 {
 
 .jumbotron-content {
     background-color: transparent;
-    justify-content: center;
-    height: 100%;
-    
+    padding-top: 35vh;
 }
 
 .intro-row {
