@@ -30,7 +30,6 @@ h4 {
 
 .nav-item {
     font-size: 16px;
-    color: #282828;
 }
 
 /* Homepage */
@@ -100,6 +99,32 @@ h4 {
 .subscriptions-col p {
     padding-top: 40px;
 }
+
+/* Application Page */
+.application-jumbotron-section {
+    background: url('/media/application-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 40vh;
+    color: white;
+}
+
+.application-jumbotron-content {
+    background-color: transparent;
+    padding-top: 10vh;
+}
+/* .application-container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+} 
+
+.application-images img {
+    display: block;
+    margin: auto;
+}
+
+.application-content {
+    padding-top: 40px;
+} */
 
 /* Footer */
 
