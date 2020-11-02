@@ -50,6 +50,10 @@
     padding: 20px 0px;
 }
 
+.about-container-what {
+    display: flex;
+}
+
 /* Subscriptions Section */
 
 .subscriptions-container {
@@ -134,6 +138,10 @@
 
 .about-text h2 {
     padding-top: 50px;
+}
+
+.about-container-what {
+    display: flex;
 }
 
 .subscriptions-col {
