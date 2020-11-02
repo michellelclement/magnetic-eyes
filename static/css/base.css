@@ -27,10 +27,15 @@ h4 {
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
+    width: 100%;
 }
 
 .nav-item {
     font-size: 16px;
+}
+
+.nav-icons {
+    width: auto;
 }
 
 /* Footer */
@@ -69,6 +74,10 @@ h4 {
     padding-bottom: 10px;
 }
 
+.navbar {
+    flex-wrap: nowrap;
+}
+
 .nav-item-list {
     text-align: left;
     padding: 40px 0px;
@@ -81,4 +90,8 @@ h4 {
 
 }
 
+.navbar-brand {
+    letter-spacing: 3.5px;
+    font-size: 16px;
+    }
 }

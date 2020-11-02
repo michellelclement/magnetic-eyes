@@ -50,7 +50,7 @@
         </button>
 
         <!-- Main Nav Items -->
-        <div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
+        <div class="col-sm-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
           <ul class="navbar-nav justify-content-start">
             <li class="nav-item">
               <a class="nav-link" href="#">Shop</a>
@@ -66,54 +66,25 @@
             </li>
           </ul>
         </div>
+
         <!-- Logo -->
-        <div class="col-md-4 text-center">
+        <div class="col-sm-4 text-center">
           <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
         </div>
-        <!-- Cart & Dropdown -->
-        <div class="col-md-4">
-          <ul class="navbar-nav justify-content-end">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link"
-                href="#"
-                id="user-options"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <div class="text-center">
-                  <div><i class="fas fa-user fa-lg"></i></div>
-                  <p class="my-0">My Account</p>
-                </div>
-              </a>
-              <div
-                class="dropdown-menu border-0"
-                aria-labelledby="user-options"
-              >
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="#" class="dropdown-item">Register</a>
-                <a href="#" class="dropdown-item">Login</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href=""
-              >
-                <div class="text-center">
-                  <div>
-                    <i class="fas fa-shopping-bag fa-lg"></i>
-                  </div>
-                  <p class="my-0">
-                    {% if grand_total %}${{ grand_total|floatformat:2 }}{% else
-                    %}£0.00{% endif %}
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
+        
+        <!-- Cart & My Account Dropdown -->
+
+        <div class="col-sm-4 nav-icons">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <i class="nav-link fas fa-user fa-lg"></i>
+                </li>
+                <li class="nav-item">
+                     <i class="nav-link fas fa-shopping-bag fa-lg"></i>
+                </li>
+            </ul>
         </div>
+
       </nav>
     </header>
 
