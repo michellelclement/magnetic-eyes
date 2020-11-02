@@ -72,16 +72,27 @@
 .application-jumbotron-section {
     background: url('/media/application-banner.png') no-repeat center center fixed;
     background-size: cover;
-    height: 40vh;
+    height: 50vh;
     color: white;
 }
 
 .application-jumbotron-content {
     background-color: transparent;
-    padding-top: 10vh;
+    padding-top: 20vh;
 }
-/* .application-container {
-    margin-top: 200px;
+
+.application-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px;
+}
+
+.application-row h2 {
+    padding-top: 50px;
+}
+
+.application-container {
+    margin-top: 100px;
     margin-bottom: 200px;
 } 
 
@@ -92,4 +103,9 @@
 
 .application-content {
     padding-top: 40px;
-} */
+}
+
+.route-2-row {
+    padding-top: 75px;
+    padding-bottom: 200px;
+}

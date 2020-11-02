@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock%} {% block content %}
+{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock %} {% block content %} {% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container application-jumbotron-section">
@@ -16,92 +18,193 @@
 <div class="container">
   <div class="row application-row">
     <div class="col-12">
-    <h1>How to apply Magnetic Eyelashes</h1>
-    <p>
-    Magnetic eyelashes look as incredible as glue on lashes, but they are very different to apply, thankfully for us!<br>
-    Unlike the glue on versions that use one stip of lashes, magnetic eyelashes have lash stips/sections that attach to the upper and underside of your top row of lashes.<br>
-    Each piece has tiny pre-attached magnets. These pieces sandwich together around your natural lashes. Not a blob of glue in sight!<br>
-    </p>
-    <h2>Before you start</h2>
-    <ul>
-    <li><p><i class="fas fa-circle"></i>  Apply your makeup fully, including mascara.</p></li>
-    <li><p><i class="fas fa-circle"></i>  Remove the lashes from the packaging and separate the top and bottom strips/pieces from each other. This will give you one upper strip plus either 1 lower strip (double magnet lashes) or three lower lash pieces (triple lashes).</p></li>
-    </ul>
+      <h1>How to apply Magnetic Eyelashes</h1>
+      <p>
+        Magnetic eyelashes look as incredible as glue on lashes, but they are
+        very different to apply, thankfully for us!<br />
+        Unlike the glue on versions that use one stip of lashes, magnetic
+        eyelashes have lash stips/sections that attach to the upper and
+        underside of your top row of lashes.<br />
+        Each piece has tiny pre-attached magnets. These pieces sandwich together
+        around your natural lashes. Not a blob of glue in sight!<br />
+      </p>
+      <h2>Before you start</h2>
+      <p>
+        <i class="fas fa-circle"></i> Apply your makeup fully, including
+        mascara.
+      </p>
+      <p>
+        <i class="fas fa-circle"></i> Remove the lashes from the packaging and
+        separate the top and bottom strips/pieces from each other. This will
+        give you one upper strip plus either 1 lower strip (double magnet
+        lashes) or three lower lash pieces (triple lashes).
+      </p>
     </div>
   </div>
 </div>
 
-
 <!-- Triple Magnet Application -->
 <div class="container application-container">
-    <div class="row">
-
-        <div class="col-sm offset-md">
-        <div>
-            <h2>Triple Magnet Application</h2>
-            <ol class="aapplication-content">
-            <li>Apply your makeup as normal.</li>
-            <li>If needed, cut the width of the full lash strips down if they are too wide, but do not cut off any of the magnets.</li>
-            <li>Pop one of the full rows of lashes on top of your upper lashes with the shortest lashes near the inner corner of your eye. Steady in place with your non-dominant hand.</li>
-            <li>Start with the inner corner single magnet piece (the one with the shortest lashes). Hold the end of the lashes and bring it in, magnet end first, to the underside of your upper lashes to meet and clip on to the magnet above. Your natural lashes will be sandwiched between the two magnets.</li>
-            <li>Repeat for the other two single magnets, then with the other eye.</li>
-            </ol>
-        </div>
-        
-        <div class="col-sm col-md application-images">
-            <img class="img-fluid" src="media/about-magnetic-eyes.png" alt="">
-        </div>
-
+  <div class="row">
+    <div class="col-sm offset-md">
+      <div>
+        <h2>Triple Magnet Application</h2>
+        <ol class="aapplication-content">
+          <li>Apply your makeup as normal.</li>
+          <br />
+          <li>
+            If needed, cut the width of the full lash strips down if they are
+            too wide, but do not cut off any of the magnets.
+          </li>
+          <br />
+          <li>
+            Pop one of the full rows of lashes on top of your upper lashes with
+            the shortest lashes near the inner corner of your eye. Steady in
+            place with your non-dominant hand.
+          </li>
+          <br />
+          <li>
+            Start with the inner corner single magnet piece (the one with the
+            shortest lashes). Hold the end of the lashes and bring it in, magnet
+            end first, to the underside of your upper lashes to meet and clip on
+            to the magnet above. Your natural lashes will be sandwiched between
+            the two magnets.
+          </li>
+          <br />
+          <li>
+            Repeat for the other two single magnets, then with the other eye.
+          </li>
+        </ol>
+      </div>
+      <div class="about-content">
+        <a href="#" class="btn btn-primary">Shop DRAMA</a>
+      </div>
     </div>
+
+    <div class="col-sm col-md about-images">
+      <img
+        class="img-fluid"
+        src="media/application-triple.png"
+        alt="The parts of a triple magnet eyelash set"
+      />
+    </div>
+  </div>
 </div>
- 
-<!-- How do they work section -->
+
+<!-- Double Magnet Application section -->
 
 <div class="container application-container">
-<div class="row">
-<div class="col">
-<h2>Double Magnet Application</h2>
-<h4>Route 1</h4>
-<ol>
-<li>Pop the top row (the row with the magnets on the bottom of the lashes) on top of your upper lashes. They should balance here in place.</li>
-<li>Place the other row (the one with the magnets on top of the lashes) below your upper lashes. The magnets will ping together around your natural lashes.​</li>
-</ol>
-</div>
-</div>
-</div>
-
-<div class="container application-container">
-    <div class="row">
-        
-        <div class="col-sm offset-md application-images">
-            <img class="img-fluid" src="media/how-do-they-work.png" alt="">
-        </div>
-
-        <div class="col-sm col-md application-text">
-        <div>
-            <h4>Route 2</h4>
-            <ol class="application-content">
-            <li>Chop the bottom row of lashes either side of the magnets to create two smaller pieces. This way you can place them one magnet at a time. (Check out the video for more details).</li>
-            <li>Balance the top row of lashes on your natural lashes. Steady with your non-dominant hand if needed.</li>
-            <li>Take one of the newly chopped lower pieces holding them at the end of the lash. Place the magnet underneath your natural lashes to meet the magnet on the lashes above.</li>
-            </ol>
-        </div>
-        
+  <div class="row">
+    <div class="col">
+      <h2>Double Magnet Application</h2>
+      <h4>Route 1</h4>
+      <ol>
+        <li>
+          Pop the top row (the row with the magnets on the bottom of the lashes)
+          on top of your upper lashes. They should balance here in place.
+        </li>
+        <li>
+          Place the other row (the one with the magnets on top of the lashes)
+          below your upper lashes. The magnets will ping together around your
+          natural lashes.​
+        </li>
+      </ol>
     </div>
-</div>
+  </div>
+  <div class="row route-2-row">
+    <div class="col-sm col-md">
+      <div class="embed-responsive embed-responsive-1by1">
+        <iframe
+          class="embed-responsive-item"
+          src="https://www.youtube.com/embed/_7ds3Wp3QHk"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
+    </div>
+    <div class="col-sm col-md application-text">
+      <div>
+        <h4>Route 2</h4>
+        <ol class="application-content">
+          <li>
+            Chop the bottom row of lashes either side of the magnets to create
+            two smaller pieces. This way you can place them one magnet at a
+            time. (Check out the video for more details).
+          </li>
+          <li>
+            Balance the top row of lashes on your natural lashes. Steady with
+            your non-dominant hand if needed.
+          </li>
+          <li>
+            Take one of the newly chopped lower pieces holding them at the end
+            of the lash. Place the magnet underneath your natural lashes to meet
+            the magnet on the lashes above.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
 
-<!-- Subscribe and Save Section -->
-
-<div class="container subscriptions-container">
+  <!-- Some Extra Tips  -->
+  <div class="container application-container">
     <div class="row">
+      <div class="col-sm offset-md">
+        <div>
+          <h2>Some extra application tips:</h2>
+          <ol class="aapplication-content">
+            <li>
+              If the lashes are sitting too straight you may want to give them a
+              little bend so they match the curve of your eye better. (See
+              video.)
+            </li>
+            <br />
+            <li>
+              You can also slide the lashes a little left and right to get them
+              in the perfect spot
+            </li>
+            <br />
+            <li>
+              We have designed the lashes so that you can customise them a
+              little yourself if needed. You can trim them down so the strips
+              are not as wide if they are a little big for your eyes.
+            </li>
+            <br />
+          </ol>
+        </div>
+        <div class="about-content">
+          <a href="#" class="btn btn-primary">Shop DRAMA</a>
+        </div>
+      </div>
+
+      <div class="col-sm col-md">
+        <div class="embed-responsive embed-responsive-1by1">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/9J8Iw_8WFrU"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Subscribe and Save Section -->
+
+    <div class="container subscriptions-container">
+      <div class="row">
         <div class="col-md-6 subscriptions-col">
-            <h2>Subscribe & save!</h2>
-            <p>Subscribe to Magnetic Eyes Lashes and receive brand new lashes every month, saving 20% on the RRP of individual products.</p>
-            <p>Learn more here</p>
-            <div class="about-content"><a href="#" class="btn btn-primary">Subscribe & Save</a></div>
+          <h2>Subscribe & save!</h2>
+          <p>
+            Subscribe to Magnetic Eyes Lashes and receive brand new lashes every
+            month, saving 20% on the RRP of individual products.
+          </p>
+          <p>Learn more here</p>
+          <div class="about-content">
+            <a href="#" class="btn btn-primary">Subscribe & Save</a>
+          </div>
         </div>
+      </div>
     </div>
 </div>
 
+    {% endblock %}
 
-{% endblock %}
+
