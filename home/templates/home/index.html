@@ -1,4 +1,14 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock%} {% block content %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block page_header %} 
+{% endblock%} 
+
+{% block extracss %} 
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container jumbotron-section">

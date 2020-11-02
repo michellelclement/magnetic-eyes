@@ -1,0 +1,95 @@
+/* CSS Styling for Homepage, contact page and Application page */
+
+/* Homepage */
+.jumbotron-section {
+    background: url('/media/homepage-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 80vh;
+    color: white;
+}
+
+.jumbotron-content {
+    background-color: transparent;
+    padding-top: 35vh;
+}
+
+.intro-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px;
+}
+
+/* Products Section */
+.products-row-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px; 
+}
+
+.products-row {
+    margin: 50px;
+}
+.card {
+  border: none;
+  background: transparent;
+}
+
+
+/* About Section */
+.about-container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+} 
+
+.about-images img {
+    display: block;
+    margin: auto;
+}
+
+.about-content {
+    padding-top: 40px;
+}
+
+/* Subscriptions Section */
+
+.subscriptions-container {
+    background: url('/media/subscribe-image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 60vh;
+    color: white;
+}
+
+.subscriptions-col {
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+.subscriptions-col p {
+    padding-top: 40px;
+}
+
+/* Application Page */
+.application-jumbotron-section {
+    background: url('/media/application-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 40vh;
+    color: white;
+}
+
+.application-jumbotron-content {
+    background-color: transparent;
+    padding-top: 10vh;
+}
+/* .application-container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+} 
+
+.application-images img {
+    display: block;
+    margin: auto;
+}
+
+.application-content {
+    padding-top: 40px;
+} */
