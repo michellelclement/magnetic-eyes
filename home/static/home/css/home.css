@@ -47,7 +47,7 @@
 }
 
 .about-content {
-    padding-top: 40px;
+    padding: 20px 0px;
 }
 
 /* Subscriptions Section */
@@ -60,12 +60,8 @@
 }
 
 .subscriptions-col {
-    padding-top: 100px;
+    padding-top: 10vh;
     padding-left: 100px;
-}
-
-.subscriptions-col p {
-    padding-top: 40px;
 }
 
 /* Application Page */
@@ -108,4 +104,35 @@
 .route-2-row {
     padding-top: 75px;
     padding-bottom: 200px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+.jumbotron-content {
+    background-color: transparent;
+    padding-top: 20vh;
+    }
+
+.jumbotron-content h1,
+.application-jumbotron-content h1 {
+    font-size: 2.75rem;
+    }
+
+.intro-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px 0px;
+    }
+
+.about-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+} 
+
+.subscriptions-col {
+    padding-left: 20px;
+}
+
 }

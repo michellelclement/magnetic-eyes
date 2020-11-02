@@ -58,3 +58,15 @@ footer {
     padding: 30px 10px;
     font-size: 20px;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+h1,
+h2,
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    padding-bottom: 10px;
+}
+
+}
