@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% load static %} {% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/base.css' %}" />
+{% endblock %} {% block content %}
+
+<!-- Products Content -->
+
+<div class="container product-detail-container">
+    <div class="row">
+        
+        <div class="col-sm offset-md">
+            <img
+            class="card-img-top"
+            src="{{ product.image_url }}" target="_blank"
+            alt="{{ product_name }}"
+          />
+        </div>
+
+        <div class="col-sm col-md">
+            <div>
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>{{ product.price }}</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+{% endblock %}

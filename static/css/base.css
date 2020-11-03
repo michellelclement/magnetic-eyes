@@ -78,7 +78,25 @@ footer {
     padding-top: 20vh;
 }
 
+.products-text-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 50px;
+}
 
+.card-title {
+    text-decoration: none;
+    color: #282828;
+}
+
+/* Product Detail Page */
+
+.product-detail-container {
+    margin-top: 150px;
+}
+
+
+/* Media Queries */
 @media only screen and (max-width: 768px) {
 
 h1,

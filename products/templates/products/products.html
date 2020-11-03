@@ -18,11 +18,11 @@
 <!-- Products Intro Text -->
 
 <div class="container">
-  <div class="row intro-row">
+  <div class="row products-text-row">
     <div class="col-12">
       <p>
         We believe in quality and style over quantity, which is why we have
-        worked on perfecting just a handfull of custom made lash styles. <br />
+        worked on perfecting just a handfull of custom made lash styles. <br /><br />
         Choose between a double magnet set or our newly launched triple magnet
         lashes, both in dramatic or subtle options.
       </p>
@@ -35,11 +35,11 @@
 <div class="container product-container">
   <div class="row">
     {% for product in products %}
-    <div class="col">
-      <div class="card" style="width: 18rem">
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="card border-0">
         <!-- Product Image -->
         {% if product_image %}
-        <a href="">
+        <a href="{% url 'product_detail' product.id %}">
           <img
             class="card-img-top"
             src="{{ product.image_url }}"
@@ -47,7 +47,7 @@
           />
         </a>
         {% else %}
-        <a href="">
+        <a href="{% url 'product_detail' product.id %}">
           <img
             class="card-img-top"
             src="{{ MEDIA_URL }}noimage.png"
@@ -59,15 +59,10 @@
 
       <!-- Card Body -->
       <div class="card-body pl-0">
-        <h4 class="card-title">{{ product.name }}</h4>
-      </div>
-
-      <div class="card-footer">
-        <div class="row">
-          <div class="col">
-            <p class="card-text">{{ product.price}}</p>
-          </div>
-        </div>
+        <a href="{% url 'product_detail' product.id %}">
+            <h4 class="card-title pb-0">{{ product.name }}</h4>
+        </a>
+        <p class="card-text">{{ product.price}}</p>
       </div>
     </div>
     {% endfor %}
