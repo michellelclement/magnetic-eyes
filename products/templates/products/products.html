@@ -1,72 +1,75 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock %} {% block content %}
-{% block extracss %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% extends "base.html" %} {% load static %} {% block page_header %} 
+{% endblock %} {% block content %} {% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/base.css' %}" />
 {% endblock %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container application-jumbotron-section">
-	<div class="row">
-		<div class="col-12">
-			<div class="jumbotron application-jumbotron-content text-center">
-				<h1 class="display-4">SHOP FOR MAGNETIC EYE LASHES</h1>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron application-jumbotron-content text-center">
+        <h1 class="display-4">SHOP FOR MAGNETIC EYELASHES</h1>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Products Intro Text -->
 
 <div class="container">
-	<div class="row intro-row">
-		<div class="col-12">
-			<p> We believe in quality and style over quantity, which is why we have worked on perfecting just a handfull
-				of custom made lash styles. <br>
-      Choose between a double magnet set or our newly launched triple magnet lashes, both in dramatic or subtle options.</p>
-		</div>
-	</div>
+  <div class="row intro-row">
+    <div class="col-12">
+      <p>
+        We believe in quality and style over quantity, which is why we have
+        worked on perfecting just a handfull of custom made lash styles. <br />
+        Choose between a double magnet set or our newly launched triple magnet
+        lashes, both in dramatic or subtle options.
+      </p>
+    </div>
+  </div>
 </div>
 
 <!-- Products Content -->
 
 <div class="container">
-	<div class="row">
-		{% for product in products}
-            <div class="col">
-                <div class="card" style="width: 18rem">
-                    <!-- Product Image -->
-                    {% if product_image %}
-			            <a href="">
-				        <img
-                        class="card-img-top"
-                        src="{{ product.image_url }}"
-                        alt="{{ product_name }}"
-                        />
-                        </a>
-				    {% else %}
-				        <a href="">
-					    <img
-                        class="card-img-top"
-                        src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ product_name }}"
-                        />
-                        </a>
-					{% endif %}
-                </div>
-					
-                <!-- Card Body -->
-				<div class="card-body pl-0">
-				    <h4 class="card-title">{{ product.name }}</h4>
-				</div>
+  <div class="row">
+    {% for product in products}
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <!-- Product Image -->
+        {% if product_image %}
+        <a href="">
+          <img
+            class="card-img-top"
+            src="{{ product.image_url }}"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% else %}
+        <a href="">
+          <img
+            class="card-img-top"
+            src="{{ MEDIA_URL }}noimage.png"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% endif %}
+      </div>
 
-				<div class="card-footer">
-				    <div class="row">
-				        <div class="col">
-							<p class="card-text">{{ product.price}}</p>
-						</div>
-					</div>
-				</div>
-		    </div>
-		{% endfor %}
+      <!-- Card Body -->
+      <div class="card-body pl-0">
+        <h4 class="card-title">{{ product.name }}</h4>
+      </div>
+
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">
+            <p class="card-text">{{ product.price}}</p>
+          </div>
+        </div>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
