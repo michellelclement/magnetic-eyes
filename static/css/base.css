@@ -64,6 +64,20 @@ footer {
     font-size: 20px;
 }
 
+/* Products Page */
+
+.product-jumbotron-section {
+    background: url('/media/application-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    color: white;
+}
+
+.product-jumbotron-content {
+    background-color: transparent;
+    padding-top: 20vh;
+}
+
 
 @media only screen and (max-width: 768px) {
 

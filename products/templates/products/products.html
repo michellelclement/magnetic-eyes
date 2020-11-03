@@ -1,13 +1,14 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} 
-{% endblock %} {% block content %} {% block extracss %}
+{% extends "base.html" %}
+{% load static %} 
+{% block extracss %}
 <link rel="stylesheet" href="{% static 'home/css/base.css' %}" />
-{% endblock %}
+{% endblock %} {% block content %} 
 
 <!-- Jumbotron -->
-<div class="jumbotron-container application-jumbotron-section">
+<div class="jumbotron-container product-jumbotron-section">
   <div class="row">
     <div class="col-12">
-      <div class="jumbotron application-jumbotron-content text-center">
+      <div class="jumbotron product-jumbotron-content text-center">
         <h1 class="display-4">SHOP FOR MAGNETIC EYELASHES</h1>
       </div>
     </div>
@@ -31,9 +32,9 @@
 
 <!-- Products Content -->
 
-<div class="container">
+<div class="container product-container">
   <div class="row">
-    {% for product in products}
+    {% for product in products %}
     <div class="col">
       <div class="card" style="width: 18rem">
         <!-- Product Image -->
