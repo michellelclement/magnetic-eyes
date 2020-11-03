@@ -23,6 +23,12 @@ h4 {
     color: #282828;
 }
 
+.btn-secondary {
+    background-color: #00e4f9;
+    border: none;
+    color: #282828;
+}
+
 /* Devliery Banner */
 
 .delivery-container {
