@@ -23,7 +23,20 @@ h4 {
     color: #282828;
 }
 
+/* Devliery Banner */
+
+.delivery-container {
+    background-color: #282828;
+    color: #F9F9F9;
+}
+
+.delivery-col P {
+    Padding: 5px 0px;
+    margin: 0;
+}
+
 /* Nav Bar */
+
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
