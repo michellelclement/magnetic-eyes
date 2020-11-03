@@ -95,6 +95,12 @@ footer {
     margin-top: 150px;
 }
 
+/* Bag page */
+
+.bag-container {
+    margin-top: 150px;
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
