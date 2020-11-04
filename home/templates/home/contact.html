@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% load static %} {% block content %} 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
+
+<!-- Jumbotron -->
+<div class="jumbotron-container application-jumbotron-section">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron application-jumbotron-content text-center">
+        <h1 class="display-4">CONTACT US</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row application-row">
+    <div class="col-12">
+      <h1>Have a question?</h1>
+      <p>Ask us</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+
+<div class="container container-form">
+  <div class="row">
+    <div class="col-12">
+      <form>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="name"
+          placeholder="Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+        <textarea
+          name="message"
+          class="form-control"
+          id="message"
+          maxlength="500"
+        ></textarea>
+        <button type="submit" class="btn btn-primary">Submit Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
