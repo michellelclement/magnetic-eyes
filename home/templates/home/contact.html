@@ -4,7 +4,7 @@
 {% endblock %}
 
 <!-- Jumbotron -->
-<div class="jumbotron-container application-jumbotron-section">
+<div class="jumbotron-container contact-jumbotron-section">
   <div class="row">
     <div class="col-12">
       <div class="jumbotron application-jumbotron-content text-center">
@@ -18,16 +18,16 @@
   <div class="row application-row">
     <div class="col-12">
       <h1>Have a question?</h1>
-      <p>Ask us</p>
+      <p>Whether it is about your order, that you require more information about a product, or simply want to ask how we are, feel free to drop us a message in the form below.</p>
     </div>
   </div>
 </div>
 
 <!-- Contact Form -->
 
-<div class="container container-form">
+<div class="container contact-container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-md-6 offset-md-3">
       <form>
         <input
           type="text"
@@ -50,6 +50,8 @@
           class="form-control"
           id="message"
           maxlength="500"
+          placeholder="Type your message here"
+          required
         ></textarea>
         <button type="submit" class="btn btn-primary">Submit Message</button>
       </form>
