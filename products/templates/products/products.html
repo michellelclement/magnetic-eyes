@@ -38,11 +38,11 @@
     <div class="col-sm-6 col-md-6 col-lg-4">
       <div class="card border-0">
         <!-- Product Image -->
-        {% if product_image %}
+        {% if product.image.url %}
         <a href="{% url 'product_detail' product.id %}">
           <img
             class="card-img-top"
-            src="{{ product.image_url }}"
+            src="{{ product.image.url }}"
             alt="{{ product_name }}"
           />
         </a>
