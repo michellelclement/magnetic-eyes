@@ -1,44 +1,100 @@
-{% extends "base.html" %} 
-{% load static %} 
-
-{% block extracss %} 
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
-{% endblock %}
-
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block extracss %}
+{% endblock %} {% block content %}
 
 <div class="container bag-container">
-
-    <div class="row">
-        <div class="col">
-                <h2>Shopping Bag</h2>
-            <hr>
-        </div>
+  <div class="row">
+    <div class="col">
+      <h2>Shopping Bag</h2>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col">
-        {% if bag_items %}
-                    <div class="table-responsive rounded">
-                        {{ bag_items }}
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-primary">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span>Keep Shopping</span>
-                    </a>
+  <div class="row">
+    <div class="col">
+      {% if bag_items %}
+      <div class="table-responsive rounded">
+        <!-- Bag items Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product Info</th>
+              <th scope="col"></th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in bag_items %}
+            <tr>
+              <td class="w-25">
+                <img
+                  class="img-fluid"
+                  src="{{ item.product.image.url }}"
+                  alt="{{ product_name }}"
+                />
+              </td>
+              <td>
+                <p>{{ item.product.name }}</p>
+              </td>
+              <td>
+                <p>£{{ item.product.price }}</p>
+              </td>
+              <td class="w-25">
+                <p>{{ item.quantity }}</p>
+              </td>
+              <td>
+                <p>£{{ item.product.price }}</p>
+              </td>
+            </tr>
+        {% endfor %}
+            <tr>
+              <td colspan="5" class="pt-5 text-right">
+                <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                <h4 class="mt-4">
+                  <strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong>
+                </h4>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-1 text-danger">
+                  You could get free delivery by spending just
+                  <strong>£{{ free_delivery_delta }}</strong> more!
+                </p>
                 {% endif %}
-        </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-right">
+                <a
+                  href="{% url 'products' %}"
+                  class="btn btn-primary"
+                >
+                  <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                  </span>
+                  <span>Keep Shopping</span>
+                </a>
+                <a href="" class="btn btn-secondary">
+                  <span>Secure Checkout</span>
+                  <span class="icon">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <p class="lead mb-5">Your bag is empty.</p>
+      <a href="{% url 'products' %}" class="btn btn-primary">
+        <span class="icon">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span>Keep Shopping</span>
+      </a>
+      {% endif %}
     </div>
-
-
+  </div>
 </div>
 
-
-
 {% endblock %}
-
