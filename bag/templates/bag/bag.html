@@ -40,7 +40,7 @@
                 <p>£{{ item.product.price }}</p>
               </td>
               <td class="w-25">
-                <form class="update-form" method="POST" acion="">
+                <form class="update-form" method="POST" acion="{% url 'adjust_bag' item.item_id %}">
                     {% csrf_token %}
                     <!-- Update Quantity -->
                     <div class="form-group">
