@@ -5,8 +5,8 @@
   aria-atomic="true"
 >
   <div class="arrow-up arrow-success">
-    <div class="w-100 toast-header bg-success">
-      <strong class="mr-auto">Success!</strong>
+    <div class="w-100 toast-header">
+      <strong class="ml-2">Success!</strong>
       <button
         type="button"
         class="ml-2 mb-1 close"
@@ -18,18 +18,18 @@
     </div>
     <div class="toast-body bg-white">
       <div class="row">
-        <div class="col">
+        <div class="col ml-2 pl-0 mt-2">
           {{ message }}
           <hr class="mt-1 mb-3" />
         </div>
       </div>
       {% if grand_total %}
-      <p>Your Bag ({{ product_count }})</p>
+      <p class="ml-2">Your Bag ({{ product_count }})</p>
       <div class="bag-notification-wrapper">
         {% for item in bag_items %}
         <div class="row">
           <div class="col-3 my-1">
-            <img class="w-100" src="{{ item.product.image.url }}" />
+            <img class="w-100 ml-2" src="{{ item.product.image.url }}" />
           </div>
           <div class="col-9">
             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -41,22 +41,25 @@
       <div class="row">
         <div class="col">
           <strong
-            ><p>
+            ><p class="ml-2">
               Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}:
               <span class="float-right">£{{ total|floatformat:2 }}</span>
             </p></strong
           >
           {% if free_delivery_delta > 0 %}
-          <p class="bg-warning text-center">
+          <a href="{% url 'products' %}" class="btn btn-primary btn-block">
+          <p class="text-center mb-0">
             Spend <strong>£{{ free_delivery_delta }}</strong> more to get free
             next day delivery!
-          </p>
+          </p></a>
+
+
           {% endif %}
           <a
             href="{% url 'view_bag' %}"
-            class="btn btn-black btn-block rounded-0"
+            class="btn btn-secondary btn-block"
           >
-            <span class="text-uppercase">Go To Secure Checkout</span>
+            <span class="">Go To Secure Checkout</span>
             <span class="icon">
               <i class="fas fa-lock"></i>
             </span>

@@ -145,6 +145,11 @@ footer {
     z-index: 99999;
 }
 
+.toast-header {
+    background-color: #282828;
+    color: #F9F9F9;
+}
+
 .custom-toast {
     overflow: visible;
 }
