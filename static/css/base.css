@@ -137,6 +137,14 @@ footer {
     margin-top: 150px;
 }
 
+/* Messages / Toasts */
+.message-container {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 99999;
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
