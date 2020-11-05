@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% load static %} {% block extracss %} {% endblock %}
+{% extends "base.html" %} {% load static %}
+{% load bag_tools %}
 {% block content %}
 
 <div class="container bag-container">
@@ -93,7 +94,7 @@
                 >
               </td>
               <td>
-                <p>£{{ item.product.price }}</p>
+                <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
               </td>
             </tr>
             {% endfor %}
