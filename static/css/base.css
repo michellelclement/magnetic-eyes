@@ -41,6 +41,11 @@ h4 {
     color: #282828;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* Devliery Banner */
 
 .delivery-container {
