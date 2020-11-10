@@ -160,6 +160,12 @@ footer {
     overflow-y: auto;
 }
 
+/* All Auth Styling */
+.allauth-form-inner-content {
+    margin-top: 3rem;
+}
+
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
 
