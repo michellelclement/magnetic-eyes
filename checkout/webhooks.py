@@ -8,7 +8,9 @@ from checkout.webhook_handler import StripeWH_Handler
 import stripe
 
 
-def webhook (request):
+@require_POST
+@csrf_exempt
+def webhook(request):
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
