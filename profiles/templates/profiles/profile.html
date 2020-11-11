@@ -7,7 +7,25 @@
     <div class="col">
       <h2>My Profile</h2>
     </div>
-  </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p>Default Delivery Information</p>
+            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-secondary float-right">Update Information</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>Order History</p>
+            {{ orders }}
+         </div>
+    </div>
+
+
+
   {{ profile }}
 
 
