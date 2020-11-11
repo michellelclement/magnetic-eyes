@@ -6,7 +6,7 @@ from .models import Product, Category
 def all_products(request):
 
     products = Product.objects.all()
-    categories = None
+    categories = Category.objects.all() 
 
     if request.GET:
         if 'category' in request.GET:
