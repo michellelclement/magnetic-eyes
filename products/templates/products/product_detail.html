@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block extracss %}
-<link rel="stylesheet" href="{% static 'home/css/base.css' %}" />
+<link rel="stylesheet" href="{% static 'css/base.css' %}" />
 {% endblock %} {% block content %}
 
 <!-- Products Content -->
@@ -26,7 +26,7 @@
       <div>
         <h2>{{ product.name }}</h2>
         {% if product.category %}
-            <p>
+            <p class="product-category">
             <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
             </a>
             </p>
