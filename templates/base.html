@@ -83,13 +83,12 @@
         <!-- Cart & My Account Dropdown -->
 
         <div class="col-sm-4 nav-icons">
-            <ul class="navbar-nav justify-content-end">
-            
+            <ul class="navbar-nav justify-content-end">           
             <!-- My Account -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center"><i class="nav-link fas fa-user fa-lg"></i></div>
-                        <p>My Account</p>
+                        <p class="d-none d-lg-block">My Account</p>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
@@ -109,7 +108,7 @@
                 <a class="{% if grand_total %}text-info{% else %}{% endif %} nav-link" href="{% url 'view_bag' %}">
                     <div class="text-center">
                     <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
-                    <p>
+                    <p class="d-none d-lg-block">
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
                     {% else %}
