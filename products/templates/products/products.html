@@ -16,7 +16,6 @@
 </div>
 
 <!-- Products Intro Text -->
-
 <div class="container">
   <div class="row products-text-row">
     <div class="col-12">
@@ -35,9 +34,17 @@
 <div class="container">
     <div class="row">
         <div class="col text-center">
+        <h4>Filter lashes by Category</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container category-container">
+    <div class="row mb-5">
+        <div class="col text-center category-btns">
             {% for c in current_categories %}
 			<a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-				<span class="p-2 mt-2 badge badge-white text-black border border-dark">{{ c.friendly_name }}</span>
+				<span class="btn-primary">{{ c.friendly_name }}</span>
 			</a>
 			{% endfor %}
         </div>
@@ -45,7 +52,7 @@
 </div>
 
 <!-- Products Content -->
-<div class="container product-container">
+<div class="container">
   <div class="row">
     {% for product in products %}
     <div class="col-sm-6 col-md-6 col-lg-4">
@@ -76,14 +83,15 @@
             <h4 class="card-title pb-0">{{ product.name }}</h4>
         </a>
         {% if product.category %}
-            <p>
+            <p class="product-category">
             <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
             </a>
             </p>
         {% endif %}
         <p class="card-text">{{ product.price}}</p>
-      </div>
+
       <!-- Edit / Delete buttons -->
+      
       {% if request.user.is_superuser %}
         <small>
             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
@@ -91,6 +99,7 @@
         </small>
         {% endif %}
     </div>
+          </div>
     {% endfor %}
   </div>
 </div>

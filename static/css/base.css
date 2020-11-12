@@ -21,24 +21,34 @@ h4 {
     background-color: #FFE902;
     border: none;
     color: #282828;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 16px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #FFFBCC;
     border: none;
     color: #282828;
+    outline: 0;
 }
 
 .btn-secondary {
     background-color: #FF8FEA;
     border: none;
     color: #282828;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 16px;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
     background-color: #fdbef1;
     border: none;
     color: #282828;
+    outline: 0;
 }
 
 .update-link,
@@ -73,6 +83,24 @@ h4 {
 .nav-icons {
     width: auto;
 }
+
+/* All Products Page */
+
+.category-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.category-btns a {
+    margin: 10px;
+}
+
+.product-container {
+    margin-bottom: 50px;
+}
+
 
 /* Product Form */
 .btn-file {
@@ -148,6 +176,15 @@ footer {
 
 .card-title {
     text-decoration: none;
+    color: #282828;
+}
+
+.card-body {
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+
+.product-category a {
     color: #282828;
 }
 
