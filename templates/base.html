@@ -43,7 +43,7 @@
  </div>
 
       <!-- Nav bar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ml-4 mr-4">
         <!-- Toggler Button -->
         <button
           class="navbar-toggler"
@@ -64,7 +64,7 @@
               <a class="nav-link" href="{% url 'products' %}">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{% url 'about' %}#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'application' %}">Application</a>
@@ -85,12 +85,11 @@
         <div class="col-sm-4 nav-icons">
             <ul class="navbar-nav justify-content-end">
             
-            <!-- Profile -->
+            <!-- My Account -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <div><i class="nav-link fas fa-user fa-lg"></i>
+                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <div class="text-center"><i class="nav-link fas fa-user fa-lg"></i></div>
                         <p>My Account</p>
-                        </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}

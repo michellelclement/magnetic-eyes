@@ -10,3 +10,6 @@ def application(request):
 
 def contact(request):
     return render(request, 'home/contact.html')
+
+def about(request):
+    return render(request, 'home')
