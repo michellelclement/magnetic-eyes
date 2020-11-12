@@ -83,7 +83,7 @@
             </div>
           </div> 
           <!-- Keep Shopping Button -->
-          <div class="col-12">
+          <div class="col-12 mt-4 mb-4">
             <a href="{% url 'products' %}" class="btn btn-primary">
               <span class="icon">
                 <i class="fas fa-chevron-left"></i>
@@ -97,6 +97,14 @@
           <input type="hidden" name="redirect_url" value="{{ request.path }}" />
         </div>
       </form>
+
+      <!-- Edit / Delete buttons -->
+      {% if request.user.is_superuser %}
+        <small>
+            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+        </small>
+        {% endif %}
     </div>
   </div>
 </div>
