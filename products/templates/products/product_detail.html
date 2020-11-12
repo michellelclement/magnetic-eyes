@@ -7,12 +7,19 @@
 <div class="container product-detail-container">
   <div class="row">
     <div class="col-sm offset-md">
-      <img
-        class="card-img-top"
-        src="{{ product.image.url }}"
-        target="_blank"
-        alt="{{ product_name }}"
-      />
+      {% if product.image %}
+          <img
+            class="card-img-top"
+            src="{{ product.image.url }}"
+            alt="{{ product_name }}"
+          />
+        {% else %}
+          <img
+            class="card-img-top"
+            src="{{ MEDIA_URL }}noimage.png"
+            alt="{{ product_name }}"
+          />
+        {% endif %}
     </div>
 
     <div class="col-sm col-md">
