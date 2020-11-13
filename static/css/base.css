@@ -202,6 +202,8 @@ footer {
 /* Messages / Toasts */
 .message-container {
     position: fixed;
+    max-width: min-content;
+    min-width: 200px;
     top: 90px;
     right: 15px;
     z-index: 99999;
@@ -210,6 +212,12 @@ footer {
 .toast-header {
     background-color: #282828;
     color: #F9F9F9;
+}
+
+.toast-close {
+    color: #F9F9F9;
+    text-shadow: 0;
+    opacity: 1;
 }
 
 .custom-toast {
