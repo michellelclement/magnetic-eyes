@@ -4,7 +4,7 @@ from .models import Post
 
 
 def all_posts(request):
-    post_list = Post.objects.filter(status=1)
+    post_list = Post.objects.filter(status=1).order_by('-created_on')
     template = "blog/blog.html"
     context = {
         'post_list': post_list
@@ -14,4 +14,6 @@ def all_posts(request):
 
 class PostDetail(generic.DetailView):
     model = Post
-    template_name = 'blog/post_detail.html'
+    template_name = 'post_detail.html'
+
+
