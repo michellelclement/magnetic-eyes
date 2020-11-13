@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 {% load static %} 
-{% block extracss %}
-<link rel="stylesheet" href="{% static 'css/base.css' %}" />
-{% endblock %} 
 
 {% block content %} 
 <!-- Jumbotron -->
 <div class="jumbotron-container blog-jumbotron-section">
   <div class="row">
     <div class="col-12">
-      <div class="jumbotron product-jumbotron-content text-center">
+      <div class="jumbotron blog-jumbotron-content text-center">
         <h1 class="display-4">BLOG</h1>
       </div>
     </div>
@@ -38,7 +35,7 @@
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More</a>
                 </div>
             </div>
             {% endfor %}

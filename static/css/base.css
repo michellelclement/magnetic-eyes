@@ -84,6 +84,58 @@ h4 {
     width: auto;
 }
 
+/* Messages / Toasts */
+.message-container {
+    position: fixed;
+    max-width: min-content;
+    min-width: 200px;
+    top: 90px;
+    right: 15px;
+    z-index: 99999;
+}
+
+.toast-header {
+    background-color: #282828;
+    color: #F9F9F9;
+}
+
+.toast-close {
+    color: #F9F9F9;
+    text-shadow: 0;
+    opacity: 1;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+}
+
+.footer-logo {
+    letter-spacing: 5.6px;
+    font-size: 28px;    
+}
+
+.footer-container {
+    background-color: #282828;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #F9F9F9;
+}
+
+
+.social-links li i {
+    color: #F9F9F9;
+    padding: 30px 10px;
+    font-size: 20px;
+}
+
+/* ------------------------------ Product Pages */
+
 /* All Products Page */
 
 .category-btns {
@@ -100,60 +152,11 @@ h4 {
     margin-bottom: 50px;
 }
 
-
-/* Product Form */
-.btn-file {
-    position: relative;
-    overflow: hidden;
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-color: red;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: red;
-    border-color: red;
-}
-
-
-/* Footer */
-
-footer {
-    margin-top: 50px;
-}
-
-.footer-logo {
-    letter-spacing: 5.6px;
-    font-size: 28px;    
-}
-
-
-.footer-container {
-    background-color: #282828;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #F9F9F9;
-}
-
-
-.social-links li i {
-    color: #F9F9F9;
-    padding: 30px 10px;
-    font-size: 20px;
-}
-
-/* Products Page */
 
 .product-jumbotron-section {
     background: url('/media/application-banner.png') no-repeat center center fixed;
@@ -193,50 +196,60 @@ footer {
     margin-top: 150px;
 }
 
-/* Bag page */
+/* --------------------------------------- Bag page */
 
 .bag-container {
     margin-top: 150px;
 }
 
-/* Messages / Toasts */
-.message-container {
-    position: fixed;
-    max-width: min-content;
-    min-width: 200px;
-    top: 90px;
-    right: 15px;
-    z-index: 99999;
+/* ---------------------------------------- Blog */
+
+.blog-jumbotron-section {
+    background: url('/media/application-banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    color: white;
 }
 
-.toast-header {
-    background-color: #282828;
-    color: #F9F9F9;
+.blog-jumbotron-content {
+    background-color: transparent;
+    padding-top: 20vh;
 }
 
-.toast-close {
-    color: #F9F9F9;
-    text-shadow: 0;
-    opacity: 1;
-}
 
-.custom-toast {
-    overflow: visible;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+/* ------------------------------------ Account Pages */
 
 /* All Auth Styling */
 .allauth-form-inner-content {
     margin-top: 3rem;
 }
 
+/* Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
 
-/* Media Queries */
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: red;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: red;
+    border-color: red;
+}
+
+/* ------------------------------------------- Media Queries */
 @media only screen and (max-width: 768px) {
 
 h1,
