@@ -13,5 +13,5 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('blog/', include('blog.urls')),
-    path('', include('sendemail.urls')),
+    path('sendemail/', include('sendemail.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
