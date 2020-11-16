@@ -17,8 +17,7 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Product Info</th>
-              <th scope="col"></th>
+              <th scope="col">Product</th>
               <th scope="col">Price</th>
               <th scope="col">Quantity</th>
               <th scope="col">Subtotal</th>
@@ -33,8 +32,6 @@
                     {% else %}
                     <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                 {% endif %}
-              </td>
-              <td>
                 <p>{{ item.product.name }}</p>
               </td>
               <td>
@@ -115,7 +112,7 @@
             </tr>
             <tr>
               <td colspan="5" class="text-right">
-                <a href="{% url 'products' %}" class="btn btn-primary">
+                <a href="{% url 'products' %}" class="btn btn-yellow">
                   <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                   </span>
@@ -134,7 +131,7 @@
       </div>
       {% else %}
       <p class="lead mb-5">Your bag is empty.</p>
-      <a href="{% url 'products' %}" class="btn btn-primary">
+      <a href="{% url 'products' %}" class="btn btn-yellow">
         <span class="icon">
           <i class="fas fa-chevron-left"></i>
         </span>

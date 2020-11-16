@@ -1,13 +1,15 @@
-<div class="toast custom-toast" data-autohide="false">
-<div class="arrow-up arrow-info">
-  <div class="toast-header bg-info">
-    <strong class="mr-auto">Alert!</strong>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+<div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+  <div class="bg-info">
+    <strong class="ml-2">Alert!</strong>
+    <button type="button toast-close" class="ml-2 mb-1 toast-close close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="toast-body">
-    {{ message }}
-  </div>
+  <div class="toast-body bg-white">
+    <div class="row">
+        <div class="col ml-2 pl-0 mt-2">
+          {{ message }}
+        </div>
+      </div>
   </div>
 </div>

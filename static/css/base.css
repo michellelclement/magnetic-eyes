@@ -17,7 +17,7 @@ h4 {
 
 /* Buttons */
 
-.btn-primary {
+.btn-yellow {
     background-color: #FFE902;
     border: none;
     color: #282828;
@@ -26,8 +26,9 @@ h4 {
     font-size: 16px;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow:focus {
     background-color: #FFFBCC;
     border: none;
     color: #282828;
@@ -70,6 +71,14 @@ h4 {
 
 /* Nav Bar */
 
+.navbar {
+    margin: 0px 24px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
@@ -82,7 +91,14 @@ h4 {
 
 .nav-icons {
     width: auto;
+    padding: 0px;
+    padding-right: 5px;
 }
+
+.nav-icons ul li {
+    padding: 0px 5px;
+}
+
 
 /* Messages / Toasts */
 .message-container {
@@ -262,10 +278,24 @@ h4 {
     font-family: 'Permanent Marker', cursive;
     padding-bottom: 10px;
 }
+
+body {
+    size: 14px;
+}
+
 /*
 .navbar {
     flex-wrap: nowrap;
 } */
+
+.navbar {
+    margin: 16px;
+    padding: 0px;
+}
+
+.navbar-toggler {
+    font-size: 1.1rem;
+}
 
 .nav-item-list {
     text-align: left;
@@ -280,9 +310,25 @@ h4 {
 
 .navbar-brand {
     letter-spacing: 3.5px;
-    font-size: 25px;
+    font-size: 20px;
     }
 
+.nav-bag-account {
+    flex-direction: unset;
+}
+
+.message-container {
+    position: fixed;
+    max-width: 300px;
+    top: 150px;
+    z-index: 99999;
+    left: 35px;
+    right: 40px;
+}
+
+.bag-container {
+    margin-top: 50px;
+}
 
 .blog-text-row {
     padding-top: 50px;
