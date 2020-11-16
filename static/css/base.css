@@ -24,6 +24,7 @@ h4 {
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 16px;
+    text-decoration: none,
 }
 
 .btn-yellow:hover,
@@ -33,6 +34,7 @@ h4 {
     border: none;
     color: #282828;
     outline: 0;
+    text-decoration: none,
 }
 
 .btn-secondary {
@@ -42,6 +44,7 @@ h4 {
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 16px;
+    text-decoration: none,
 }
 
 .btn-secondary:hover,
@@ -50,6 +53,7 @@ h4 {
     border: none;
     color: #282828;
     outline: 0;
+    text-decoration: none,
 }
 
 .update-link,
