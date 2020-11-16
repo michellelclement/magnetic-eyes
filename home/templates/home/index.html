@@ -44,9 +44,61 @@
   </div>
 </div>
 
+<!-- New Product Section -->
 <div class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="card border-0">
+        <!-- Product Image -->
+        {% if product.image %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img
+            class="card-img-top"
+            src="{{ product.image.url }}"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% else %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img
+            class="card-img-top"
+            src="{{ MEDIA_URL }}noimage.png"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% endif %}
+      </div>
+      <!-- Card Body -->
+      <div class="card-body pl-0">
+        <a href="{% url 'product_detail' product.id %}">
+            <h4 class="card-title pb-0">{{ product.name }}</h4>
+        </a>
+        {% if product.category %}
+            <p class="product-category">
+            <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
+            </a>
+            </p>
+        {% endif %}
+        <p class="card-text">{{ product.price}}</p>
+
+      <!-- Edit / Delete buttons -->
+      {% if request.user.is_superuser %}
+        <small>
+            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+        </small>
+        {% endif %}
+    </div>
+          </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<!-- <div class="container">
 <div class="row">
-    <!-- Card 1 -->
+    Card 1 
     <div class="col">
         <div class="card" style="width: 18rem">
             <img
@@ -61,8 +113,8 @@
                 <a href="#" class="btn btn-yellow">Shop DRAMA</a>
             </div>
         </div>
-    </div>
-    <!-- Card 2 -->
+    </div>-->
+    <!-- Card 2 
     <div class="col">
         <div class="card" style="width: 18rem">
             <img
@@ -77,8 +129,8 @@
                 <a href="#" class="btn btn-yellow">Shop DRAMA</a>
             </div>
         </div>
-    </div>
-    <!-- Card 3 -->
+    </div>-->
+    <!-- Card 3 
     <div class="col">
         <div class="card" style="width: 18rem">
             <img
@@ -95,7 +147,7 @@
         </div>
     </div>
 </div>
-</div>
+</div>-->
 
 <!-- About Section -->
 <div class="container about-container about-container-what" id="about">
@@ -162,4 +214,3 @@
 
 
 {% endblock %}
-

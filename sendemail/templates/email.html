@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% load static %} {% block content %} 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %}
+
+<!-- Jumbotron -->
+<div class="jumbotron-container contact-jumbotron-section">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron application-jumbotron-content text-center">
+        <h1 class="display-4">CONTACT US</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row application-row">
+    <div class="col-12">
+      <h1>Have a question?</h1>
+      <p>Whether it is about your order, that you require more information about a product, or simply want to ask how we are, feel free to drop us a message in the form below.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="container contact-container">
+  <div class="row">
+    <div class="col-md-6">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button class="btn-yellow" type="submit">Send Message</button>
+    </div>
+</form>
+ </div>
+  </div>
+{% endblock %}
