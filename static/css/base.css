@@ -221,6 +221,31 @@ footer {
     margin-top: 150px;
 }
 
+/* ---------------------------------------- Contact */
+
+.contact-jumbotron-section {
+    background: url('/media/contact-banner.png') no-repeat center center fixed;
+    color: white;
+}
+
+.contact-text-row {
+    padding-top: 50px;
+    margin: 50px;
+}
+
+.contact-form-row {
+    margin: 50px;
+}
+
+.contact-container {
+  margin-top: 6.25rem;
+  margin-bottom: 100px;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
 /* ---------------------------------------- Blog */
 
 .blog-jumbotron-section {

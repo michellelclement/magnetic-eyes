@@ -111,22 +111,6 @@
     padding-bottom: 100px;
 }
 
-
-/* Contact Page - Code taken from my previous MS2 project Mykonos Recommended */
-
-.contact-jumbotron-section {
-    background: url('/media/contact-banner.png') no-repeat center center fixed;
-}
-
-.contact-container {
-  margin-top: 6.25rem;
-  margin-bottom: 100px;
-}
-
-.form-control {
-  margin-bottom: 1rem;
-}
-
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
