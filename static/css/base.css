@@ -86,7 +86,6 @@ h4 {
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
-    width: 100%;
 }
 
 .nav-item {
@@ -274,25 +273,9 @@ footer {
 }
 
 /* ------------------------------------------- Media Queries */
-@media only screen and (max-width: 768px) {
 
-h1,
-h2,
-h4 {
-    font-family: 'Permanent Marker', cursive;
-    padding-bottom: 10px;
-}
-
-body {
-    size: 14px;
-}
-
-/*
-.navbar {
-    flex-wrap: nowrap;
-} */
-
-.navbar {
+@media only screen and (max-width: 1200px) {
+    .navbar {
     margin: 16px;
     padding: 0px;
 }
@@ -319,6 +302,31 @@ body {
 
 .nav-bag-account {
     flex-direction: unset;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+h1,
+h2,
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    padding-bottom: 10px;
+}
+
+body {
+    size: 14px;
+}
+
+
+.navbar-brand-col {
+    width: auto;
+}
+
+.toggler-col{
+    width: auto;
+    padding: 0;
 }
 
 .message-container {

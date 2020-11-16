@@ -34,7 +34,8 @@
 		<!-- Nav bar -->
 		<nav class="navbar navbar-expand-xl navbar-light bg-light">
 			<!-- Toggler Button -->
-			<button
+		<div class="col-md-4 toggler-col">
+        <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -45,9 +46,9 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+        
 			<!-- Main Nav Items -->
-			<div class="col-sm-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
+			<div class="col-4 collapse navbar-collapse nav-item-list" id="navbarTogglerDemo01">
 				<ul class="navbar-nav justify-content-start">
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'products' %}">Shop</a>
@@ -66,14 +67,14 @@
 					</li>
 				</ul>
 			</div>
-
+</div>
 			<!-- Logo -->
-			<div class="col text-center">
+			<div class="col-md-4 navbar-brand-col text-center">
 				<a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
 			</div>
 
 			<!-- Cart & My Account Dropdown -->
-			<div class="col-sm-4 nav-icons">
+			<div class="col-md-4 nav-icons">
 				<ul class="nav-bag-account navbar-nav justify-content-end">
 					<!-- My Account -->
 					<li class="nav-item dropdown">
