@@ -15,6 +15,10 @@ h4 {
     padding-bottom: 30px;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
 /* Buttons */
 
 .btn-yellow {
@@ -300,7 +304,7 @@ footer {
 /* ------------------------------------------- Media Queries */
 
 @media only screen and (max-width: 1200px) {
-    .navbar {
+.navbar {
     margin: 16px;
     padding: 0px;
 }
@@ -361,16 +365,20 @@ body {
     z-index: 99999;
     left: 35px;
     right: 40px;
-}
+    }
 
 .bag-container {
     margin-top: 50px;
-}
+    }
 
 .blog-text-row {
     padding-top: 50px;
     padding-bottom: 50px;
     margin: 50px 0px;
+    }
+
+.products-text-row {
+    margin: 1rem;
     }
 
 }
