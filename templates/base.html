@@ -89,9 +89,23 @@
           <a class="navbar-brand" href="{% url 'home' %}">MAGNETIC EYES</a>
         </div>
 
-        <!-- Cart & My Account Dropdown -->
+        <!-- Favourites, Cart & My Account Dropdown -->
         <div class="col-md-4 nav-icons">
           <ul class="nav-bag-account navbar-nav justify-content-end">
+            <!-- Favourites -->
+            <li class="nav-item list-inline-item">
+              <a
+                class="nav-link"
+                href="#"
+              >
+                <div class="text-center">
+                  <div><i class="nav-link fas fa-heart fa-lg"></i></div>
+                  <p class="d-none d-xl-block">
+                    My Favourites
+                  </p>
+                </div>
+              </a>
+            </li>
             <!-- My Account -->
             <li class="nav-item dropdown">
               <a
