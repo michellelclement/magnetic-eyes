@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% load static %}
+{% load bag_tools %}
+{% block content %}
+
+<div class="container bag-container">
+  <div class="row">
+    <div class="col">
+      <h2>My Favourites</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      {% if bag_items %}
+      <div class="table-responsive rounded">
+        <!-- Bag items Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Add to bag</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in bag_items %}
+            <tr>
+              <td class="w-25">
+                {% if item.product.image %}
+                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                {% endif %}
+                <p>{{ item.product.name }}</p>
+              </td>
+              <td>
+                <p>£{{ item.product.price }}</p>
+              </td>
+            </tr>
+            {% endfor %}
+
+            <tr>
+              <td colspan="5" class="text-right">
+                <a href="{% url 'products' %}" class="btn btn-yellow">
+                  <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                  </span>
+                  <span>Keep Shopping</span>
+                </a>
+                <a href="{% url 'checkout' %}" class="btn btn-secondary">
+                  <span>Secure Checkout</span>
+                  <span class="icon">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <p class="lead mb-5">Your bag is empty.</p>
+      <a href="{% url 'products' %}" class="btn btn-yellow">
+        <span class="icon">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span>Keep Shopping</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %} 
+{% block postloadjs %} 
+{{ block.super }} 
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+  // Update quantity on click
+  $(".update-link").click(function (e) {
+    var form = $(this).prev(".update-form");
+    form.submit();
+  });
+
+  // Remove item and reload on click
+  $(".remove-item").click(function (e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr("id").split("remove_")[1];
+    var url = `/bag/remove/${itemId}/`;
+    var data = { csrfmiddlewaretoken: csrfToken};
+
+    $.post(url, data).done(function () {
+      location.reload();
+    });
+  });
+</script>
+
+{% endblock %}
