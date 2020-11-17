@@ -33,11 +33,12 @@
             </span>
           </p>
           {{ comment.body | linebreaks }}
+          <hr>
         </div>
         {% endfor %}
       </div>
     </div>
-    <div>
+    <div class="col-md-8 card mb-4  mt-3">
       <div class="card-body">
       <!-- Add A comment -->
         {% if new_comment %}
@@ -46,7 +47,7 @@
         </div>
         {% else %}
         <h4>Leave a comment</h4>
-        <form method="post" style="margin-top: 1.3em;">
+        <form method="post">
           {{ comment_form.as_p }}
           {% csrf_token %}
           <button type="submit" class="btn btn-secondary  btn-lg">Submit Comment</button>
