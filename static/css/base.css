@@ -221,10 +221,13 @@ footer {
 
 .product-detail-container {
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .favourites i {
     color: red;
+    padding-left: 0px;
+    padding-right: 0.5rem;
 }
 
 .favourites a  {

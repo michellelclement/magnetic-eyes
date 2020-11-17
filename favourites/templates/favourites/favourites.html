@@ -15,7 +15,7 @@
 
   <div class="row">
     <div class="col">
-      {% if bag_items %}
+      {% if favourites %}
       <div class="table-responsive rounded">
         <!-- Bag items Table -->
         <table class="table">
@@ -28,7 +28,7 @@
             </tr>
           </thead>
           <tbody>
-            {% for item in bag_items %}
+            {% for item in favourites %}
             <tr>
               <td class="w-25">
                 {% if item.product.image %}
@@ -64,7 +64,7 @@
         </table>
       </div>
       {% else %}
-      <p class="lead mb-5">Your bag is empty.</p>
+      <p class="lead mb-5">Your favourites is empty.</p>
       <a href="{% url 'products' %}" class="btn btn-yellow">
         <span class="icon">
           <i class="fas fa-chevron-left"></i>
@@ -79,15 +79,8 @@
 {% endblock %} 
 {% block postloadjs %} 
 {{ block.super }} 
-{% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-  // Update quantity on click
-  $(".update-link").click(function (e) {
-    var form = $(this).prev(".update-form");
-    form.submit();
-  });
-
   // Remove item and reload on click
   $(".remove-item").click(function (e) {
     var csrfToken = "{{ csrf_token }}";

@@ -24,7 +24,7 @@
     <div class="col-sm col-md">
       <div>
 
-        <h2>{{ product.name }}</h2>
+        <h2 class="pb-1">{{ product.name }}</h2>
         <!-- Edit / Delete buttons -->
       {% if request.user.is_superuser %}
         <small>
@@ -33,7 +33,7 @@
         </small>
         {% endif %}
         {% if product.category %}
-            <p class="product-category">
+            <p class="product-category pt-2">
             <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
             </a>
             </p>
@@ -104,8 +104,15 @@
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}" />
         </div>
+      </form>
 
-        <!-- Add to Favourites -->
+ <!-- Add to Favourites FORM -->
+    <form
+        class="form"
+        action="#"
+        method="POST"
+      >
+        {% csrf_token %}
         <div class="favourites">
             <a href="#">
             <i class="nav-link fas fa-heart fa-lg"></i>
@@ -113,7 +120,6 @@
             </a>
         </div>
       </form>
-
     </div>
   </div>
 </div>
