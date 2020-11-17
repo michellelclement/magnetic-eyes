@@ -2,16 +2,27 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 from .forms import CommentForm
 from django.views import generic
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 
 
 def all_posts(request):
     post_list = Post.objects.filter(status=1).order_by('-created_on')
-    template = "blog/blog.html"
-    context = {
-        'post_list': post_list
-    }
-    return render(request, template, context)
+    paginator = Paginator(post_list, 3)  # 3 posts in each page
+    page = request.GET.get('page')
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+            # If page is not an integer deliver the first page
+        post_list = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        post_list = paginator.page(paginator.num_pages)
 
+    return render(request, 
+                  'blog/blog.html',
+                  {'page': page,
+                   'post_list': post_list})
 
 
 def post_detail(request, slug):
