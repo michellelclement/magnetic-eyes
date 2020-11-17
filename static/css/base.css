@@ -223,14 +223,30 @@ footer {
     margin-top: 150px;
 }
 
+.favourites i {
+    color: red;
+}
+
+.favourites a  {
+    color: #282828;
+}
+
 /* --------------------------------------- Bag page */
 
 .bag-container {
     margin-top: 150px;
 }
 
-/* ---------------------------------------- Contact */
+/* ---------------------------------------- Favourites */
 
+
+.favourites-text-row {
+    padding-top: 50px;
+    margin: 50px;
+}
+
+
+/* ---------------------------------------- Contact */
 .contact-jumbotron-section {
     background: url('/media/contact-banner.png') no-repeat center center fixed;
     color: white;

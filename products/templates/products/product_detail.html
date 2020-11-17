@@ -23,13 +23,22 @@
 
     <div class="col-sm col-md">
       <div>
+
         <h2>{{ product.name }}</h2>
+        <!-- Edit / Delete buttons -->
+      {% if request.user.is_superuser %}
+        <small>
+            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+        </small>
+        {% endif %}
         {% if product.category %}
             <p class="product-category">
             <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
             </a>
             </p>
         {% endif %}
+        
         <p>{{ product.description }}</p>
         <p>{{ product.price }}</p>
       </div>
@@ -88,22 +97,23 @@
                 <i class="fas fa-chevron-left"></i>
               </span>
               <span>Keep Shopping</span>
-
-              <!-- Add to Bag Button -->
             </a>
+            
+            <!-- Add to Bag Button -->
             <input type="submit" class="btn btn-secondary" value="Add to Bag" />
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}" />
         </div>
+
+        <!-- Add to Favourites -->
+        <div class="favourites">
+            <a href="#">
+            <i class="nav-link fas fa-heart fa-lg"></i>
+            Add to Favourites
+            </a>
+        </div>
       </form>
 
-      <!-- Edit / Delete buttons -->
-      {% if request.user.is_superuser %}
-        <small>
-            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-        </small>
-        {% endif %}
     </div>
   </div>
 </div>
