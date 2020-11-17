@@ -31,6 +31,7 @@
   </head>
 
   <body>
+
     <header>
       <!-- Free Delivery notification bar -->
       <div class="container-flex delivery-container">
@@ -158,6 +159,8 @@
       level == 30 %} {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %} {% include 'includes/toasts/toast_success.html' %} {% else %} {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %} {% endfor %}
     </div>
     {% endif %} {% block content %} {% endblock %}
+    
+
 
     <!-- Footer -->
     <footer>
@@ -214,21 +217,23 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
- </script> -->
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %} {% block extrameta %} {% endblock %} {% block extracss %} 
-    {% endblock %} {% block extrajs %} {% endblock %} {% block postloadjs %}
-    <!-- <script type="text/javascript">
-		$('.toast').toast('show');
-	</script> -->
+    {% endblock %} 
+    
+    {% block extrajs %} 
+    
+    {% endblock %} 
+    
+    {% block postloadjs %}
+    <!-- Toasts Scripts -->
     <script type="text/javascript">
       $(".toast").toast("show");
       console.log($(".toast"));
       console.log($(".toast").toast("show"));
     </script>
+
     {% endblock %}
   </body>
 </html>

@@ -65,6 +65,10 @@ h1 {
     cursor: pointer;
 }
 
+.btt-button {
+    display: none;
+}
+
 /* Devliery Banner */
 
 .delivery-container {
@@ -366,6 +370,23 @@ body {
     left: 35px;
     right: 40px;
     }
+
+.btt-button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    color: #FF8FEA;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    padding: 5px 15px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
 
 .bag-container {
     margin-top: 50px;
