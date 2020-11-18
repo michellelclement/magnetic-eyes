@@ -21,6 +21,15 @@ h1 {
 
 /* Buttons */
 
+.btn {
+    border: none;
+}
+
+.btn:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
 .btn-yellow {
     background-color: #FFE902;
     border: none;
@@ -45,7 +54,6 @@ h1 {
     background-color: #FF8FEA;
     border: none;
     color: #282828;
-    border-radius: 4px;
     padding: 6px 12px;
     font-size: 16px;
     text-decoration: none,
@@ -111,6 +119,11 @@ h1 {
 }
 
 .nav-bag p {
+    color: #7b7c7c!important;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa;
     color: #7b7c7c!important;
 }
 
