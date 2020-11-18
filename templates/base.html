@@ -153,7 +153,7 @@
                 class="{% if grand_total %}text-info{% else %}{% endif %} nav-link"
                 href="{% url 'view_bag' %}"
               >
-                <div class="text-center">
+                <div class="text-center nav-bag">
                   <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
                   <p class="d-none d-xl-block">
                     {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} £0.00 {% endif %}
