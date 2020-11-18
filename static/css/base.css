@@ -2,7 +2,7 @@ html,
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F9F9F9;
-    color: #282828;
+    color: #2C2C2C;
     size: 16px;
     width: 100%;
     overflow-x: hidden;
@@ -33,7 +33,7 @@ h1 {
 .btn-yellow {
     background-color: #FFE902;
     border: none;
-    color: #282828;
+    color: #2C2C2C;
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 16px;
@@ -45,7 +45,7 @@ h1 {
 .btn-yellow:focus {
     background-color: #FFFBCC;
     border: none;
-    color: #282828;
+    color: #2C2C2C;
     outline: 0;
     text-decoration: none,
 }
@@ -53,7 +53,7 @@ h1 {
 .btn-secondary {
     background-color: #FF8FEA;
     border: none;
-    color: #282828;
+    color: #2C2C2C;
     padding: 6px 12px;
     font-size: 16px;
     text-decoration: none,
@@ -63,7 +63,7 @@ h1 {
 .btn-secondary:focus {
     background-color: #fdbef1;
     border: none;
-    color: #282828;
+    color: #2C2C2C;
     outline: 0;
     text-decoration: none,
 }
@@ -80,7 +80,7 @@ h1 {
 /* Devliery Banner */
 
 .delivery-container {
-    background-color: #282828;
+    background-color: #2C2C2C;
     color: #F9F9F9;
 }
 
@@ -104,6 +104,10 @@ h1 {
     font-size: 28px;
 }
 
+.my-account-mobile {
+    display: none;
+}
+
 .nav-item {
     font-size: 16px;
 }
@@ -124,9 +128,16 @@ h1 {
 
 .dropdown-menu {
     background-color: #f8f9fa;
-    color: #7b7c7c!important;
 }
 
+.dropdown-menu a {
+    color: #7b7c7c;
+}
+
+.dropdown-menu a:active {
+    background-color: #f8f9fa;
+    color: #7b7c7c;
+}
 /* Messages / Toasts */
 .message-container {
     position: fixed;
@@ -138,7 +149,7 @@ h1 {
 }
 
 .toast-header {
-    background-color: #282828;
+    background-color: #2C2C2C;
     color: #F9F9F9;
 }
 
@@ -164,7 +175,7 @@ footer {
 }
 
 .footer-container {
-    background-color: #282828;
+    background-color: #2C2C2C;
     padding-top: 100px;
     padding-bottom: 100px;
     color: #F9F9F9;
@@ -221,7 +232,7 @@ footer {
 
 .card-title {
     text-decoration: none;
-    color: #282828;
+    color: #2C2C2C;
 }
 
 .card-body {
@@ -230,7 +241,7 @@ footer {
 }
 
 .product-category a {
-    color: #282828;
+    color: #2C2C2C;
 }
 
 /* Product Detail Page */
@@ -247,7 +258,7 @@ footer {
 }
 
 .favourites a  {
-    color: #282828;
+    color: #2C2C2C;
 }
 
 /* --------------------------------------- Bag page */
@@ -269,6 +280,11 @@ footer {
 .contact-jumbotron-section {
     background: url('/media/contact-banner.png') no-repeat center center fixed;
     color: white;
+}
+
+.contact-jumbotron-content {
+    background-color: transparent;
+    padding-top: 20vh;
 }
 
 .contact-text-row {
@@ -372,6 +388,13 @@ footer {
     flex-direction: unset;
 }
 
+.my-account {
+    display: none;
+}
+
+.my-account-mobile {
+    display: block;
+}
 }
 
 @media only screen and (max-width: 768px) {
