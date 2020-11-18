@@ -4,7 +4,7 @@
 
 <div class="container product-detail-container">
   <div class="row">
-    <div class="col-sm offset-md">
+    <div class="col-sm offset-md product-detail-image">
       {% if product.image %}
       <img
         class="card-img-top"
@@ -104,7 +104,11 @@
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}" />
         </div>
-      </form>
 
+      </form>
+ 
+      </div>
+  </div>
+    </div>
       {% endblock %} {% block postloadjs %} {{ block.super }} 
       {% include 'products/includes/quantity_input_script.html' %} {% endblock %}

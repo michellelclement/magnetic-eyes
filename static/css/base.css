@@ -102,6 +102,7 @@ h1 {
 .navbar-brand {
     letter-spacing: 5.6px;
     font-size: 28px;
+    margin-right: 0px;
 }
 
 .my-account-mobile {
@@ -360,12 +361,12 @@ footer {
 
 @media only screen and (max-width: 1200px) {
 .navbar {
-    margin: 16px;
+    margin: 16px 75px;;
     padding: 0px;
 }
 
 .navbar-toggler {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .nav-item-list {
@@ -383,6 +384,10 @@ footer {
     letter-spacing: 3.5px;
     font-size: 20px;
     }
+
+.bag-icon i {
+    font-size: 1rem;
+}
 
 .nav-bag-account {
     flex-direction: unset;
@@ -410,6 +415,10 @@ body {
     size: 14px;
 }
 
+.navbar {
+    margin: 16px;
+    padding: 0px;
+}
 
 .navbar-brand-col {
     width: auto;
@@ -464,6 +473,18 @@ body {
 
 @media only screen and (max-width: 600px) {
 
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 16px;
+    }
 
+.product-detail-container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.product-detail-image img {
+    padding-bottom: 30px;
+}
 
 }
