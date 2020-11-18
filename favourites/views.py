@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def favourites(request):
@@ -15,5 +15,5 @@ def add_to_favourites(request, item_id):
     favourites[item_id] = favourites
 
     request.session['favourites'] = favourites
-    print(request.session['favourites'])
-    return redirect(redirect_url)
+    print(redirect_url)
+    return redirect(reverse('product_detail', args=[item_id]))

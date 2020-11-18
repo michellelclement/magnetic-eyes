@@ -386,15 +386,15 @@ footer {
 
 .nav-bag-account {
     flex-direction: unset;
-}
+    }
 
 .my-account {
     display: none;
-}
+    }
 
 .my-account-mobile {
     display: block;
-}
+    }
 }
 
 @media only screen and (max-width: 768px) {
