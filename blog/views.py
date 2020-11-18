@@ -48,10 +48,3 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
-
-
-"""
-class PostDetail(generic.DetailView):
-    model = Post
-    template_name = 'blog/post_detail.html'
-"""
