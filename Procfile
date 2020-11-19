@@ -1,1 +1,1 @@
-web: gunicorn magnetic-eyes.wsgi:application
+web: gunicorn magnetic_eyes.wsgi:application
