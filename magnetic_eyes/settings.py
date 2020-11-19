@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'blog',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -171,6 +172,16 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+# Instruct which AWS bucket to communicate with for Heroku
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'magnetic-eyes'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 25
