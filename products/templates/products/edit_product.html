@@ -20,7 +20,7 @@
                         {% endif %}
                     {% endfor %}
             <div class="text-right">
-                <a class="btn btn-yellow" href="{% url 'products' %}">Cancel</a>
+                <a class="btn btn-yellow" href="{% url 'product_detail' product.id %}">Cancel</a>
                 <button class="btn btn-secondary" type="submit">Update Product</button>
             </div>
         </form>
