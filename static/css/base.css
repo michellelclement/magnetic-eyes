@@ -214,7 +214,7 @@ footer {
 }
 
 .product-jumbotron-section {
-    background: url('/media/application-banner.png') no-repeat center center fixed;
+    background: url('/media/products-banner.png') no-repeat center center;
     background-size: cover;
     height: 50vh;
     color: white;
@@ -279,7 +279,7 @@ footer {
 
 /* ---------------------------------------- Contact */
 .contact-jumbotron-section {
-    background: url('/media/contact-banner.png') no-repeat center center fixed;
+    background: url('/media/contact-banner.png') no-repeat center center;
     color: white;
 }
 
@@ -309,7 +309,7 @@ footer {
 /* ---------------------------------------- Blog */
 
 .blog-jumbotron-section {
-    background: url('/media/blog-banner.png') no-repeat center center fixed;
+    background: url('/media/blog-banner.png') no-repeat center center;
     background-size: cover;
     height: 50vh;
     color: white;
