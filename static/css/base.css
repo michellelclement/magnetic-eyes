@@ -37,7 +37,7 @@ h1 {
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 16px;
-    text-decoration: none,
+    text-decoration: none;
 }
 
 .btn-yellow:hover,
@@ -47,7 +47,7 @@ h1 {
     border: none;
     color: #2C2C2C;
     outline: 0;
-    text-decoration: none,
+    text-decoration: none;
 }
 
 .btn-secondary {
@@ -66,7 +66,7 @@ h1 {
     border: none;
     color: #2C2C2C;
     outline: 0;
-    text-decoration: none,
+    text-decoration: none;
 }
 
 .update-link,
