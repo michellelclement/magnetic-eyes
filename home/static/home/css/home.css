@@ -71,6 +71,7 @@
 }
 
 /* Application Page */
+
 .application-jumbotron-section {
     background: url('/media/application-banner.png') no-repeat center center fixed;
     background-size: cover;
@@ -114,10 +115,25 @@
 
 /* -------------------------------------- Media Queries */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+.jumbotron-section {
+    background: url('/media/homepage-banner-mobile.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+}
+
 .jumbotron-content {
     background-color: transparent;
-    padding-top: 30vh;
+    padding-top: 35vh;
+    }
+
+@media only screen and (max-width: 768px) {
+
+.jumbotron-content {
+    background-color: transparent;
+    padding-top: 20vh;
     }
 
 .jumbotron-content h1,
