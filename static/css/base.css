@@ -444,7 +444,7 @@ body {
 
 .message-container {
     position: fixed;
-    max-width: 300px;
+    max-width: fit-content;
     top: 150px;
     z-index: 99999;
     left: 35px;
