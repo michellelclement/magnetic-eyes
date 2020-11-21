@@ -134,58 +134,64 @@
     }
 
 @media only screen and (max-width: 768px) {
-
-.jumbotron-content {
+    
+    .jumbotron-content {
     background-color: transparent;
     padding-top: 20vh;
     }
 
-.jumbotron-content h1,
-.application-jumbotron-content h1 {
-    font-size: 2.75rem;
+    .jumbotron-content h1 {
+        font-size: 2.75rem;
+        }
+
+    .application-jumbotron-content {
+        padding-top: 15vh;
     }
 
+    .application-jumbotron-content h1 {
+        font-size: 3rem;
+        }
 .intro-row,
-.application-row {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    margin: 0px 30px;
+    .application-row {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        margin: 0px 30px;
+        }
+
+    .about-container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    } 
+
+    .about-text h2 {
+        padding-top: 50px;
     }
 
-.about-container {
-    margin-top: 100px;
-    margin-bottom: 50px;
-} 
+    .about-container-what {
+        display: flex;
+    }
 
-.about-text h2 {
-    padding-top: 50px;
-}
+    .subscriptions-col {
+        padding-left: 20px;
+    }
 
-.about-container-what {
-    display: flex;
-}
+    .route-2-row {
+        padding-top: 75px;
+        padding-bottom: 50px;
+    }
 
-.subscriptions-col {
-    padding-left: 20px;
-}
+    .application-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 
-.route-2-row {
-    padding-top: 75px;
-    padding-bottom: 50px;
-}
+    .application-content {
+        padding-top: 0px;
+    }
 
-.application-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.application-content {
-    padding-top: 0px;
-}
-
-.application-text {
-    padding-top: 50px;
-}
+    .application-text {
+        padding-top: 50px;
+    }
 
 }
 
