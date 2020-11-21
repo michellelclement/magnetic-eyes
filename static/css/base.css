@@ -150,19 +150,24 @@ h1 {
     z-index: 99999;
 }
 
+.toast-header-success {
+    background-color: #FF8FEA;
+    color: #2C2C2C;
+}
+
 .toast-header {
     background-color: #2C2C2C;
     color: #F9F9F9;
 }
 
 .toast-close {
-    color: #F9F9F9;
+    color: #2C2C2C;
     text-shadow: 0;
     opacity: 1;
 }
 
 .custom-toast {
-    overflow: visible;
+    overflow: wrap;
 }
 
 /* Footer */
