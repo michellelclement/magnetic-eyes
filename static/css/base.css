@@ -414,6 +414,7 @@ h1,
 h2,
 h4 {
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 body {
@@ -482,6 +483,7 @@ body {
     }
 
 }
+
 
 @media only screen and (max-width: 600px) {
 

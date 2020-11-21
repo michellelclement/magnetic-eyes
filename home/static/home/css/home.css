@@ -54,6 +54,8 @@
 }
 
 .about-container-what {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -136,7 +138,6 @@
 @media only screen and (max-width: 768px) {
     
     .jumbotron-content {
-    background-color: transparent;
     padding-top: 20vh;
     }
 
@@ -151,23 +152,17 @@
     .application-jumbotron-content h1 {
         font-size: 3rem;
         }
-.intro-row,
+
+    .intro-row,
     .application-row {
         padding-top: 100px;
         padding-bottom: 50px;
         margin: 0px 30px;
         }
-
-    .about-container {
-        margin-top: 100px;
-        margin-bottom: 50px;
-    } 
-
-    .about-text h2 {
-        padding-top: 50px;
-    }
-
+    
     .about-container-what {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -200,5 +195,6 @@
 .jumbotron-content h1 {
     font-size: 2.50rem;
     }
-
+    }
+}
 }
