@@ -8,7 +8,7 @@ from .forms import ProductForm
 
 def all_products(request):
 
-    products = Product.objects.all()
+    products = Product.objects.order_by('-sku').all()
     categories = Category.objects.all() 
 
     if request.GET:

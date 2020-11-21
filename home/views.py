@@ -4,7 +4,7 @@ from products.models import Product
 
 def index(request):
 
-    products = Product.objects.all()
+    products = Product.objects.order_by('-sku').all()[:2]
     context = {
         'products': products,
     }
