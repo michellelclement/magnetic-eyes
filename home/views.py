@@ -3,7 +3,13 @@ from products.models import Product
 
 
 def index(request):
-    return render(request, 'home/index.html')
+
+    products = Product.objects.all()
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'home/index.html', context)
 
 
 def application(request):
@@ -16,13 +22,3 @@ def contact(request):
 
 def about(request):
     return render(request, 'home')
-
-
-def products(request):
-
-    products = Products.objects.all()
-    context = {
-        'products': products,
-    }
-
-    return render(request, context)
