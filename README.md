@@ -189,6 +189,40 @@ Once deployed, as detailed above, all of the key variables were then copied into
 
 ## Design
 
+![Design Items Image](static/readme_docs/design.jpg)
+
+**Fonts**
+I wanted to create a modern yet slightly funky website, whilst keeping a simple and high-quality design. To achieve this I decided to use the Permeant Marker for import and stand out header fonts. Upon testing, I noticed that this font didn’t always work on some browsers, even though Google Font documents stated they should. To combat this, I added two additional fall-back fronts. Unfortunately, no other fonts are like permanent Marker, so I added Impact font as the fallback and Sans Serif after that.
+
+For the main body font, I decided to use Poppins Regular, as this complemented permanent Marker nicely and was clean and easy to read. I also made Sans Serif the fallback font for Poppins.
+
+** Brand **
+For the main brand, or logo, I went for a simple, font based logo with custom spacing. The letter-spacing is 5.6px on a desktop which reduces to 3.5 on mobile and uses the font Poppins in all capitals. 
+
+**Colours**
+I decided to use two main accent colours, in addition to the purple in the banner images. A nice bright yellow is used for shopping and info content and buttons, with bright pink for other content such as ‘add to bag’ and ‘checkout’ buttons. Both these colours are used sparingly and complement the purple, as well as the black and white lashes in the product images. I included a lighter, washed-out version of both colours for hover buttons.
+
+Yellow: #FFE902
+Light Yellow: #FFFBCC
+Pink: #FF8FEA
+Light Pink: #ff8fea
+
+
 ## Credits
+**Blog Content:** Blog posts were previously submitted to me for Magnetic Eyes by bloggers [According to Alice](https://accordingtoalicex.com/2019/06/18/trichotillomania-make-up-tips/), [Black Tulip Beauty](https://www.blacktulipbeauty.co.uk/) and [Of Beauty & Nothinness](https://www.ofbeautyandnothingness.co.uk/) for use on the previous version of the Magnetic Eyes Lashes website and social media pages. Images used in those posts were also provided by both bloggers. Content of the blog posts were written by me, and link out to their respective blog posts.
+**Images:** 
+* Banner images: These images were from free stocksites [Pexels](https://www.pexels.com/discover/) and [Unsplash](https://unsplash.com/) and overlaid with a purple gradient design.
+* Product images: All product images were taken by myself and are of my own products I used to sell.
+* Homepage & Application page photos and video: All images and videos were taken and created by myself. The photo of the eye is my eye.
+
+**Blog Implementation Tutorial**
+In order to implement my brand new modules, I followed the following tutorials, with some additions of my own (such as adding images)
+[Blog App](https://djangocentral.com/building-a-blog-application-with-django/)
+[Blog Comments](https://djangocentral.com/creating-comments-system-with-django/)
+[Blog Pagination](https://djangocentral.com/adding-pagination-with-django/)
+
+**SendEmail (contact us) App Tutorial**
+In order to add a contact app (or sendemail) I used the following tutorial to do so. I made some small amends, such as using Crispy Form instead of the suggested.
+[Django Email Contact Form](https://learndjango.com/tutorials/django-email-contact-form)
 
 ## Acknowledgements
