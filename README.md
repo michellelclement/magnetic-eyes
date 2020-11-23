@@ -28,7 +28,6 @@ You can view the live website here. [Magnetic Eyes Lashes](https://magnetic-eyes
 14. [**Acknowledgements**](#acknowledgements)
 
 
-## Secret Key & Key Variables
 
 ## Website Purpose:
 
@@ -48,6 +47,7 @@ Website’s primary functions:
 * A blog to provide news and additional information around the products
 
 
+
 ## UX
 
 Target Audience:
@@ -57,9 +57,11 @@ The audience which the website targets are mostly, but not exclusively, female, 
 * Learn about the products on offer and the benefit they give 
 * Purchase an item
 
+
 ## User Stories
 
 **New user, user stories**
+
 New visitors to the website should be provided with the answers they need right away. These include:
 * As a new user, I want to be able to learn more about Magnetic Eyes lashes so that I can get to know the brand
 * As a new user, I want to be able to understand how Magnetic Lashes work so that I can learn what the product is about and how to use them
@@ -69,6 +71,7 @@ New visitors to the website should be provided with the answers they need right 
 * As a shopper, I want to be able to contact the website owner so that I can ask them a question
 
 **Registered user, user stories:**
+
 Registered users of the website will be provided with additional features which non-registered users will not benefit from. 
 * As a registered user, I want to be able to easily log in and out of my account so that I can access my personal information and order history
 * As a registered user, I want to be able to easily update my profile information so that I can update my personal details
@@ -77,6 +80,7 @@ Registered users of the website will be provided with additional features which 
 * As a registered user, I want to be able to save my preferred payment details so that I can save time ordering in the future
 
 **Website shopper user stories:**
+
 All shoppers of the website, new, returning or registered:
 * As a shopper, I want to be able to view all eyelashes available so that I can decide which product I might like to learn more about
 * As a shopper, I want to be able to view details of a product so that I can learn more about that particular product
@@ -92,6 +96,7 @@ All shoppers of the website, new, returning or registered:
 * As a shopper, I want to be able to view the latest products added to the store so that I can buy view the newest products and purchase them if I wish
 
 ## The Site Owner:
+
 The owner of the website wants to be able to sell their products is the easiest way possible. They also want to be able to educate and support the buyer with information on how these products work and how to use them, since they are different from the normal glue on false lashes.
 
 They also want to be able to manage the site easily, with the ability to simply add, update and delete products listed without any complicated coding or website backend knowledge.
@@ -112,7 +117,9 @@ They also want to be able to manage the site easily, with the ability to simply 
 * As the site owner, I want to be able to inform visitors of news and tips so that I can keep users returning and buying new products.
 
 
+
 ## Wireframes
+
 
 
 ## Scope:
@@ -121,21 +128,34 @@ They also want to be able to manage the site easily, with the ability to simply 
 * Users can purchase an item
 
 
+
 ## Existing Website Features
+
 **Navigation Bar:** The navbar is split into 3 sections with 2 navigation sections to make navigating the site easy. The first is the main navigation items for learning about products, contacting, reading the blog and most importantly, shopping for the products. The second is the details for MyAccount, with its sub-menu dependant on whether the users are already logged in or not, or is a superuser, and the bag which displays an up to date total of items in it.
+
 **Sign up/Register & Sign In** This is found under the My Account menu item where users can log in to their account or register for the site.
+
 **Delete product (superuser only):** Superusers can delete products easily either by clicking the delete button found under the items on the Shop page or the individual product page.
+
 **Update product (superuser only):** Superusers can update the details of a product easily either by clicking the delete button found under the items on the Shop page, or on the individual product page, and then amending the form.
+
 **Contact form:** The Contact page includes a form which submits messages from users directly to the site owner.
+
 **Add item(s) to bag:** This button allows users to add items to the bag without navigating away from the page they are on. 
+
 **Select item quantity:** On the product details page, users can select the number of items of that product they want to add to their basked using the + and – buttons, then ‘Add to Bag’
+
 **Update item(s) Quantity:** On the bag page, users can update the number of items they wish to order of a product by changing the quantity number using the + and – buttons, then click the ‘update’ button
+
 **Delete item(s) from the bag:** Users can remove an item from the bag completely by clicking the ‘remove’ button beneath the item in their bag.
+
 **Back to the top on selected mobile pages:** Some pages of the website can become a little long on mobile. To help users with this I have added a ‘back to top’ button on these longer pages.
+
 **Blog**: A blog is a perfect way for the website owner to provide useful information to users. This could include new product news, makeup tips and reviews from bloggers etc. The blog has been paginated so that it does not become too long, and users can also leave comments below a blog post.
 
 
 ## Features to add in the future:
+
 * Defensive delete button: Currently, the Delete button to delete a product has no defence to stop it being automatically pressed. A confirmation of delete should be added.
 * Leave reviews beneath products: Reading reviews are a great way to help users decide to purchase a product. This feature would be great to include in the future but was not seen as imperative for launch.
 * Subscription purchase model: To entice users to regularly receive lashes, a subscription service would provide them with regular deliveries and a reduced cost. This would also benefit the website owner so that they have pre-orders already in place each month.
@@ -151,7 +171,7 @@ They also want to be able to manage the site easily, with the ability to simply 
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) 
 * [JavaScript](https://www.javascript.com/) 
 * [JavaQuery](https://jquery.com/)
-* [Django]( https://www.djangoproject.com/
+* [Django]( https://www.djangoproject.com/)
 * [GitHub](https://github.com/)
 * [GitPod](https://www.gitpod.io/)
 * [Heroku](https://www.heroku.com/)
@@ -167,10 +187,12 @@ They also want to be able to manage the site easily, with the ability to simply 
 * [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
 
 
+
 ## Deployment to Heroku
 Once I got Magnetic Eyes to its MVP, I decided to deploy the project to Heroku so I could see, test and update the site in real-time. Here is my deployment process.
 
 Read the full deployment process here. 
+
 
 ## Clone The Repository
 Cloning the repository makes a copy of the repository which you download and store on your machine locally.
@@ -197,6 +219,7 @@ The variables needed in your local repo are:
 If you add your variables in an env.py then **do not commit this page**. You will be making those variables available to the public. Instead, first you must create a file named .gitignore with the contents simply .env.py
 
 
+
 ## Secret Key & Key Variables
 It is incredibly important to not store secret keys into version control. To stop this happening, I saved them all into key variables which we call from our settings.
 
@@ -204,29 +227,37 @@ In production and before deployment, these secret keys were stored in my GitPod 
 
 Once deployed, as detailed above, all of the key variables were then copied into the Config Vars.
 
+
 ## Design
 
 ![Design Items Image](static/readme_docs/design.jpg)
 
 **Fonts**
+
 I wanted to create a modern yet slightly funky website, whilst keeping a simple and high-quality design. To achieve this I decided to use the Permeant Marker for import and stand out header fonts. Upon testing, I noticed that this font didn’t always work on some browsers, even though Google Font documents stated they should. To combat this, I added two additional fall-back fronts. Unfortunately, no other fonts are like permanent Marker, so I added Impact font as the fallback and Sans Serif after that.
 
 For the main body font, I decided to use Poppins Regular, as this complemented permanent Marker nicely and was clean and easy to read. I also made Sans Serif the fallback font for Poppins.
 
-** Brand **
+** Brand**
+
 For the main brand, or logo, I went for a simple, font based logo with custom spacing. The letter-spacing is 5.6px on a desktop which reduces to 3.5 on mobile and uses the font Poppins in all capitals. 
 
 **Colours**
+
 I decided to use two main accent colours, in addition to the purple in the banner images. A nice bright yellow is used for shopping and info content and buttons, with bright pink for other content such as ‘add to bag’ and ‘checkout’ buttons. Both these colours are used sparingly and complement the purple, as well as the black and white lashes in the product images. I included a lighter, washed-out version of both colours for hover buttons.
 
 Yellow: #FFE902
+
 Light Yellow: #FFFBCC
+
 Pink: #FF8FEA
+
 Light Pink: #ff8fea
 
 
 ## Credits
 **Blog Content:** Blog posts were previously submitted to me for Magnetic Eyes by bloggers [According to Alice](https://accordingtoalicex.com/2019/06/18/trichotillomania-make-up-tips/), [Black Tulip Beauty](https://www.blacktulipbeauty.co.uk/) and [Of Beauty & Nothinness](https://www.ofbeautyandnothingness.co.uk/) for use on the previous version of the Magnetic Eyes Lashes website and social media pages. Images used in those posts were also provided by both bloggers. Content of the blog posts were written by me, and link out to their respective blog posts.
+
 **Images:** 
 * Banner images: These images were from free stocksites [Pexels](https://www.pexels.com/discover/) and [Unsplash](https://unsplash.com/) and overlaid with a purple gradient design.
 * Product images: All product images were taken by myself and are of my own products I used to sell.
