@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 def all_posts(request):
     post_list = Post.objects.filter(status=1).order_by('-created_on')
-    paginator = Paginator(post_list, 3)  # 3 posts in each page
+    paginator = Paginator(post_list, 5)  # 5 posts in each page
     page = request.GET.get('page')
     try:
         post_list = paginator.page(page)
