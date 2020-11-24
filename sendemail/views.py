@@ -22,4 +22,6 @@ def contactView(request):
 
 
 def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+
+    return render(request, "contact_success.html")
+    # return HttpResponse('Success! Thank you for your message.')

@@ -13,12 +13,23 @@ def index(request):
 
 
 def application(request):
-    return render(request, 'home/application.html')
+
+    context = {
+        'application_page': 'active',
+    }
+
+    return render(request, 'home/application.html', context)
 
 
 def contact(request):
-    return render(request, '/contact.html')
+
+    context = {
+        'contact_page': 'active',
+    }
+
+    return render(request, '/contact.html', context)
 
 
 def about(request):
-    return render(request, 'home')
+
+    return render(request, 'home', context)

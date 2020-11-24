@@ -20,6 +20,7 @@ def all_products(request):
     context = {
         'products': products,
         'current_categories': categories,
+        'shop_page': 'active',
     }
 
     return render(request, 'products/products.html', context)
