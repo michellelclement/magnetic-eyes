@@ -126,16 +126,19 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
     .jumbotron-content {
         padding-top: 20vh;
     }
 
+    .application-jumbotron-content h1,
     .jumbotron-content h1 {
     font-size: 2.75rem;
     }
-}
-
-@media only screen and (max-width: 768px) {
 
     .intro-row,
     .application-row {
@@ -144,4 +147,31 @@
         margin: 0px 30px;
     }
 
+    .about-container,
+    .application-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .triple-magnet-applicaiton,
+    .double-magnet-applicaiton {
+        padding: 0;
+    }
+
+    .extra-tips {
+        margin-top: 0;
+    }
 }
+
+
+/* 
+@media only screen and (max-width: 600px) {
+
+    .intro-row,
+    .application-row {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        margin: 0px 30px;
+    }
+
+} */
