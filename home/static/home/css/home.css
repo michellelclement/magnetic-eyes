@@ -118,83 +118,30 @@
 
 /* -------------------------------------- Media Queries */
 
+
 @media only screen and (min-width: 1200px) {
 .jumbotron-content {
     padding-top: 35vh;
     }
-
-@media only screen and (max-width: 1200px) {
-.jumbotron-section {
-    background: url('/media/homepage-banner-mobile.png') no-repeat;
-    height: 80vh;
-    color: white;
 }
 
-.jumbotron-content {
-    background-color: transparent;
-    padding-top: 35vh;
-    }
-
 @media only screen and (max-width: 768px) {
-    
     .jumbotron-content {
-    padding-top: 20vh;
+        padding-top: 20vh;
     }
 
     .jumbotron-content h1 {
-        font-size: 2.75rem;
-        }
-
-    .application-jumbotron-content {
-        padding-top: 15vh;
+    font-size: 2.75rem;
     }
+}
 
-    .application-jumbotron-content h1 {
-        font-size: 3rem;
-        }
+@media only screen and (max-width: 768px) {
 
     .intro-row,
     .application-row {
         padding-top: 100px;
         padding-bottom: 50px;
         margin: 0px 30px;
-        }
-    
-    .about-container-what {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
     }
 
-    .subscriptions-col {
-        padding-left: 20px;
-    }
-
-    .route-2-row {
-        padding-top: 75px;
-        padding-bottom: 50px;
-    }
-
-    .application-container {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .application-content {
-        padding-top: 0px;
-    }
-
-    .application-text {
-        padding-top: 50px;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-
-.jumbotron-content h1 {
-    font-size: 2.50rem;
-    }
-    }
-}
 }
