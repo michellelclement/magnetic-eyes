@@ -19,10 +19,13 @@ def all_posts(request):
         # If page is out of range deliver last page of results
         post_list = paginator.page(paginator.num_pages)
 
-    return render(request, 
-                  'blog/blog.html',
-                  {'page': page,
-                   'post_list': post_list})
+    context = {
+        'blog_page': 'active',
+        'page': page,
+        'post_list': post_list,
+    }
+
+    return render(request, 'blog/blog.html', context)
 
 
 def post_detail(request, slug):
