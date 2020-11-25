@@ -59,20 +59,6 @@
     display: flex;
 }
 
-/* Subscriptions Section */
-
-.subscriptions-container {
-    background: url('/media/subscribe-image2.png') no-repeat center center;
-    background-size: cover;
-    height: 60vh;
-    color: white;
-}
-
-.subscriptions-col {
-    padding-top: 10vh;
-    padding-left: 100px;
-}
-
 /* Application Page */
 
 .application-jumbotron-section {
@@ -110,6 +96,9 @@
     padding-top: 40px;
 }
 
+.application-content li {
+    padding-bottom: 20px;
+}
 
 .route-2-row {
     padding-top: 75px;
