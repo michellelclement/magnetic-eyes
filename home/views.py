@@ -32,4 +32,4 @@ def contact(request):
 
 def about(request):
 
-    return render(request, 'home', context)
+    return render(request, 'home')

@@ -9,7 +9,7 @@ from .forms import ProductForm
 def all_products(request):
 
     products = Product.objects.order_by('-sku').all()
-    categories = Category.objects.all() 
+    categories = Category.objects.all()
 
     if request.GET:
         if 'category' in request.GET:
@@ -51,7 +51,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Opps! Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Opps! Failed to add product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -75,10 +76,12 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Yey! The product has been successfully updated!')
+            messages.success(request, 'Yey! The product \
+                has been successfully updated!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Oops! The product failed to update. Please ensure the form is valid.')
+            messages.error(request, 'Oops! The product failed to update. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
