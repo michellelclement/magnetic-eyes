@@ -30,7 +30,7 @@
 <div class="container contact-container">
   <div class="row contact-form-row">
     <div class="col-12">
-      <form action="" method="post">
+      <form action="{% url 'contact' %}" method="post">
         {% csrf_token %} {{ form|crispy }}
         <div class="form-actions">
           <button class="btn-yellow" type="submit">Send Message</button>
