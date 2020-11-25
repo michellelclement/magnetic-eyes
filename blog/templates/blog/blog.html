@@ -35,7 +35,7 @@
                     <img class="card-img-top mb-3" src="{{ post.image.url }}" alt="{{ post.title }}"/>
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{ post.content|safe|slice:":200" }}...</p>
+                    <p class="card-text">{{ post.content|safe|slice:":100" }}...</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-yellow">Read More</a>
                 </div>
             </div>
@@ -43,6 +43,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Pagination -->
 <div>

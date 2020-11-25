@@ -3,7 +3,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #F9F9F9;
     color: #2C2C2C;
-    size: 16px;
     width: 100%;
     overflow-x: hidden;
 }
@@ -163,12 +162,7 @@ h1 {
 
 .toast-close {
     color: #2C2C2C;
-    text-shadow: 0;
     opacity: 1;
-}
-
-.custom-toast {
-    overflow: wrap;
 }
 
 /* Footer */
@@ -419,7 +413,7 @@ h4 {
 }
 
 body {
-    size: 14px;
+    font-size: 14px;
 }
 
 .navbar {
