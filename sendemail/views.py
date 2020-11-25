@@ -25,7 +25,7 @@ def contactView(request):
         'form': form,
     }
 
-    return render(request, "contact.html", context)
+    return render(request, "sendemail/contact.html", context)
 
 
 def successView(request):
