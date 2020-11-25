@@ -104,11 +104,11 @@
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}" />
         </div>
-
       </form>
- 
-      </div>
-  </div>
     </div>
-      {% endblock %} {% block postloadjs %} {{ block.super }} 
-      {% include 'products/includes/quantity_input_script.html' %} {% endblock %}
+  </div>
+</div>
+{% endblock %} {% block postloadjs %} 
+{{ block.super }} 
+{% include 'products/includes/quantity_input_script.html' %} 
+{% endblock %}

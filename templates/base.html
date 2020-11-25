@@ -119,10 +119,7 @@
                     </p>
                   </div>
                 </a>
-                <div
-                  class="dropdown-menu border-0"
-                  aria-labelledby="myaccount"
-                >
+                <div class="dropdown-menu border-0" aria-labelledby="myaccount">
                   {% if request.user.is_authenticated %} 
                   {% if request.user.is_superuser %}
                   <a
@@ -188,10 +185,7 @@
                 </div>
                 <p class="d-none d-xl-block">My Account</p>
               </a>
-              <div
-                class="dropdown-menu border-0"
-                aria-labelledby="myaccount"
-              >
+              <div class="dropdown-menu border-0" aria-labelledby="myaccount">
                 {% if request.user.is_authenticated %} 
                 {% if request.user.is_superuser %}
                 <a
@@ -264,35 +258,37 @@
     <!-- Footer -->
     <footer>
       <div class="container-fluid footer-container text-center">
-        <div class="footer-logo">MAGNETIC EYES
+        <div class="footer-logo">MAGNETIC EYES</div>
+        <div class="row">
+          <div class="col">
+            <ul class="list-inline social-links">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.twitter.com/" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="row">
-                <div class="col">
-                    <ul class="list-inline social-links">
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.twitter.com/" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+          <div class="col">
+            <p>
+              Copyright Michelle L Clement 2020 | Website Designed & Built by
+              Michelle L Clement
+            </p>
+          </div>
         </div>
-        <div class="row">
-                <div class="col">
-                    <p> Copyright Michelle L Clement 2020 | Website Designed & Built by Michelle L Clement</p>
-                </div>
-        </div>
-        </div>
+      </div>
     </footer>
 
     <!-- Optional JavaScript -->
@@ -316,8 +312,11 @@
     ></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %} {% block extrameta %} {% endblock %} {% block extracss %} 
-    {% endblock %} {% block extrajs %} {% endblock %} {% block postloadjs %}
+    {% endblock %} 
+    {% block extrameta %} {% endblock %} 
+    {% block extracss %} {% endblock %} 
+    {% block extrajs %} {% endblock %} 
+    {% block postloadjs %}
     <!-- Toasts Scripts -->
     <script>
       $(".toast").toast("show");

@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block content %} {% block extracss %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %} 
+{% block extracss %}
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
 {% endblock %}
 
@@ -47,7 +50,6 @@
 
 <div class="container application-container">
   <div class="row application-row triple-magnet-applicaiton">
-
     <div class="col-md-6 application-images">
       <img
         class="img-fluid"
@@ -82,11 +84,13 @@
         </ol>
       </div>
       <div class="application-content">
-        <div class="applcation-content"><a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a></div>
+        <div class="applcation-content">
+          <a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a>
+        </div>
       </div>
     </div>
+  </div>
 </div>
- </div>
 <!-- Double Magnet Application section -->
 
 <div class="container application-container">
@@ -145,23 +149,22 @@
   <div class="container application-container extra-tips">
     <div class="row">
       <div class="col-md-6">
-          <h2>Some extra application tips:</h2>
-          <ol class="application-content">
-            <li>
-              If the lashes are sitting too straight you may want to give them a
-              little bend so they match the curve of your eye better. (See
-              video.)
-            </li>
-            <li>
-              You can also slide the lashes a little left and right to get them
-              in the perfect spot
-            </li>
-            <li>
-              We have designed the lashes so that you can customise them a
-              little yourself if needed. You can trim them down so the strips
-              are not as wide if they are a little big for your eyes.
-            </li>
-          </ol>
+        <h2>Some extra application tips:</h2>
+        <ol class="application-content">
+          <li>
+            If the lashes are sitting too straight you may want to give them a
+            little bend so they match the curve of your eye better. (See video.)
+          </li>
+          <li>
+            You can also slide the lashes a little left and right to get them in
+            the perfect spot
+          </li>
+          <li>
+            We have designed the lashes so that you can customise them a little
+            yourself if needed. You can trim them down so the strips are not as
+            wide if they are a little big for your eyes.
+          </li>
+        </ol>
       </div>
 
       <div class="col-md-6">
@@ -175,19 +178,18 @@
       </div>
     </div>
   </div>
-    <!-- Back to top button -->
-    <div class="btt-button">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-circle-up"></i>
-        </a>	
-    </div>
+  <!-- Back to top button -->
+  <div class="btt-button">
+    <a class="btt-link d-flex h-100">
+      <i class="fas fa-arrow-circle-up"></i>
+    </a>
+  </div>
 </div>
+{% endblock %} {% block postloadjs %}
+<!-- Back to top button script -->
+<script>
+  $(".btt-link").click(function (e) {
+    window.scrollTo(0, 0);
+  });
+</script>
 {% endblock %}
-{% block postloadjs %}
-    <!-- Back to top button script -->
-     <script>
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    {% endblock %}

@@ -1,5 +1,6 @@
-{% extends "base.html" %} {% load static %}
-{% load bag_tools %}
+{% extends "base.html" %} 
+{% load static %} 
+{% load bag_tools %} 
 {% block content %}
 
 <div class="container bag-container">
@@ -14,33 +15,31 @@
       {% if bag_items %}
       <div class="d-block d-md-none">
         <div class="row">
-            <div class="col">
-                {% include "bag/bag-total.html" %}
-            </div>
+          <div class="col">{% include "bag/bag-total.html" %}</div>
         </div>
         <div class="row">
-            <div class="col">
-                {% include "bag/checkout-buttons.html" %}
-                <p class="mt-3">A summary of your bag contents is below.</p>
-            </div>
+          <div class="col">
+            {% include "bag/checkout-buttons.html" %}
+            <p class="mt-3">A summary of your bag contents is below.</p>
+          </div>
         </div>
         {% for item in bag_items %}
         <div class="row">
-            <div class="col-12 col-sm-6 md-2">
-                {% include "bag/product-image.html" %}
-            </div>            
-            <div class="col-12 col-sm-6 order-sm-last">
-                <p>£{{ item.product.price }}</p>
-                <h3>£{{ item.product.price | calc_subtotal:item.quantity }}</h3>
-            </div>
-            <div class="col-12 col-sm-6 md-2">
-                {% include "bag/quantity-form.html" %}
-            </div>
+          <div class="col-12 col-sm-6 md-2">
+            {% include "bag/product-image.html" %}
+          </div>
+          <div class="col-12 col-sm-6 order-sm-last">
+            <p>£{{ item.product.price }}</p>
+            <h3>£{{ item.product.price | calc_subtotal:item.quantity }}</h3>
+          </div>
+          <div class="col-12 col-sm-6 md-2">
+            {% include "bag/quantity-form.html" %}
+          </div>
         </div>
         <div class="row">
-            <div class="col">
-                <hr>
-            </div>
+          <div class="col">
+            <hr />
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -58,15 +57,11 @@
           <tbody>
             {% for item in bag_items %}
             <tr>
-              <td class="w-25">
-                {% include "bag/product-image.html" %}
-              </td>
+              <td class="w-25">{% include "bag/product-image.html" %}</td>
               <td>
                 <p>£{{ item.product.price }}</p>
               </td>
-              <td class="w-25">
-                {% include "bag/quantity-form.html" %}
-              </td>
+              <td class="w-25">{% include "bag/quantity-form.html" %}</td>
               <td>
                 <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
               </td>
@@ -99,11 +94,11 @@
 </div>
 
 <!-- Back to top button -->
-    <div class="btt-button">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-circle-up"></i>
-        </a>	
-    </div>
+<div class="btt-button">
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>
+</div>
 
 {% endblock %} 
 {% block postloadjs %} 
@@ -122,7 +117,7 @@
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr("id").split("remove_")[1];
     var url = `/bag/remove/${itemId}/`;
-    var data = { csrfmiddlewaretoken: csrfToken};
+    var data = { csrfmiddlewaretoken: csrfToken };
 
     $.post(url, data).done(function () {
       location.reload();
@@ -131,10 +126,10 @@
 </script>
 
 <!-- Back to top button script -->
-     <script>
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
+<script>
+  $(".btt-link").click(function (e) {
+    window.scrollTo(0, 0);
+  });
+</script>
 
 {% endblock %}

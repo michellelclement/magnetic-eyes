@@ -1,12 +1,6 @@
-{% extends "base.html" %} 
-{% load static %} 
-
-{% block extracss %} 
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
-{% endblock %}
-
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block extracss %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+{% endblock %} {% block content %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container jumbotron-section">
@@ -20,9 +14,7 @@
   </div>
 </div>
 
-
 <!-- Intro Section -->
-
 <div class="container">
   <div class="row intro-row">
     <div class="col-12">
@@ -45,104 +37,124 @@
   </div>
 </div>
 
-
 <!-- Product Row -->
 <div class="container">
-    <div class="row">
+  <div class="row">
     {% for product in products %}
-        <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="card border-0">
-                <!-- Product Image -->
-                {% if product.image %}
-                    <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product_name }}"/>
-                    </a>
-                {% else %}
-                    <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product_name }}"/>
-                    </a>
-                {% endif %}
-            </div>
-              <!-- Card Body -->
-            <div class="card-body pl-0">
-                <a href="{% url 'product_detail' product.id %}">
-                    <h4 class="card-title pb-0">{{ product.name }}</h4>
-                </a>
-                {% if product.category %}
-                    <p class="product-category">
-                        <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}</a>
-                    </p>
-                {% endif %}
-                <p class="card-text">{{ product.price}}</p>    
-            </div>
-        </div>
-    {% endfor %}
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="card border-0">
+        <!-- Product Image -->
+        {% if product.image %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img
+            class="card-img-top"
+            src="{{ product.image.url }}"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% else %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img
+            class="card-img-top"
+            src="{{ MEDIA_URL }}noimage.png"
+            alt="{{ product_name }}"
+          />
+        </a>
+        {% endif %}
+      </div>
+      <!-- Card Body -->
+      <div class="card-body pl-0">
+        <a href="{% url 'product_detail' product.id %}">
+          <h4 class="card-title pb-0">{{ product.name }}</h4>
+        </a>
+        {% if product.category %}
+        <p class="product-category">
+          <a href="{% url 'products' %}?category={{ product.category.name }}"
+            >{{ product.category.friendly_name }}</a
+          >
+        </p>
+        {% endif %}
+        <p class="card-text">{{ product.price}}</p>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- About Section -->
 <div class="container about-container about-container-what" id="about">
-    <div class="row about-row">
-        <div class="col-md-6 order-md-12 about-images about-image-what">
-            <img class="img-fluid" src="{{ MEDIA_URL }}about-magnetic-eyes.png" alt="Magnetic Eyes in use">
-        </div>
-        <div class="col-md-6 order-md-1 about-text">
-        <div>
-            <h2>What are Mangetic Eyes Lashes?</h2>
-            <p class="about-content">
-            <i class="fas fa-circle"></i>  Bespoke magnetic lash design<br>
-            <i class="fas fa-circle"></i>  Long lasting, multiple uses<br>
-            <i class="fas fa-circle"></i>  Never run out of eyelash glue<br>
-            <i class="fas fa-circle"></i>  No chemicals near the eye<br>
-            <i class="fas fa-circle"></i>  No damage to natural lashes<br>
-            <i class="fas fa-circle"></i>  Lightweight<br>
-            <i class="fas fa-circle"></i>  Easy application and gentle to remove<br>
-            <i class="fas fa-circle"></i>  Perfect for those with allergies<br>
-            <i class="fas fa-circle"></i>  Cruelty free
-            </p>
-            </div>
-            <div class="about-content"><a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a></div>
-        </div>
+  <div class="row about-row">
+    <div class="col-md-6 order-md-12 about-images about-image-what">
+      <img
+        class="img-fluid"
+        src="{{ MEDIA_URL }}about-magnetic-eyes.png"
+        alt="Magnetic Eyes in use"
+      />
     </div>
+    <div class="col-md-6 order-md-1 about-text">
+      <div>
+        <h2>What are Mangetic Eyes Lashes?</h2>
+        <p class="about-content">
+          <i class="fas fa-circle"></i> Bespoke magnetic lash design<br />
+          <i class="fas fa-circle"></i> Long lasting, multiple uses<br />
+          <i class="fas fa-circle"></i> Never run out of eyelash glue<br />
+          <i class="fas fa-circle"></i> No chemicals near the eye<br />
+          <i class="fas fa-circle"></i> No damage to natural lashes<br />
+          <i class="fas fa-circle"></i> Lightweight<br />
+          <i class="fas fa-circle"></i> Easy application and gentle to remove<br />
+          <i class="fas fa-circle"></i> Perfect for those with allergies<br />
+          <i class="fas fa-circle"></i> Cruelty free
+        </p>
+      </div>
+      <div class="about-content">
+        <a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a>
+      </div>
+    </div>
+  </div>
 </div>
- 
+
 <!-- How do they work section -->
 <div class="container about-container about-container-how">
-    <div class="row">
-        <div class="col-md-6 about-images">
-            <img class="img-fluid" src="{{ MEDIA_URL }}how-do-they-work.png" alt="the separate parts of magnetic lashes laid out">
-        </div>
-        <div class="col-md-6 about-text">
-        <div>
-            <h2>How do Magnetic Lashes work?</h2>
-            <p class="about-content">
-            Unlike glue on lashes, magnetic eyelashes have two strips or multiple pieces of lashes with teeny tiny magnets already attached. 
-            </p>
-            <ol>
-            <li>Pop the top row of lashes on top of your upper lashes. </li>
-            <li>Place the bottom piece(s) below your upper lashes. </li>
-            <li>The magnets will ping together around your natural lashes.</li>
-            </ol>
-            </div>
-            <div class="about-content"><a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a></div>
-        </div>
+  <div class="row">
+    <div class="col-md-6 about-images">
+      <img
+        class="img-fluid"
+        src="{{ MEDIA_URL }}how-do-they-work.png"
+        alt="the separate parts of magnetic lashes laid out"
+      />
     </div>
+    <div class="col-md-6 about-text">
+      <div>
+        <h2>How do Magnetic Lashes work?</h2>
+        <p class="about-content">
+          Unlike glue on lashes, magnetic eyelashes have two strips or multiple
+          pieces of lashes with teeny tiny magnets already attached.
+        </p>
+        <ol>
+          <li>Pop the top row of lashes on top of your upper lashes.</li>
+          <li>Place the bottom piece(s) below your upper lashes.</li>
+          <li>The magnets will ping together around your natural lashes.</li>
+        </ol>
+      </div>
+      <div class="about-content">
+        <a href="{% url 'products' %}" class="btn btn-yellow">Shop Now</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-
 <!-- Back to top button -->
-    <div class="btt-button">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-circle-up"></i>
-        </a>	
-    </div>
+<div class="btt-button">
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>
+</div>
 
+{% endblock %} {% block postloadjs %}
+<!-- Back to top button script -->
+<script>
+  $(".btt-link").click(function (e) {
+    window.scrollTo(0, 0);
+  });
+</script>
 {% endblock %}
-{% block postloadjs %}
-    <!-- Back to top button script -->
-     <script>
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    {% endblock %}

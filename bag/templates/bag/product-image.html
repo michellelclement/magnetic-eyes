@@ -1,6 +1,14 @@
 {% if item.product.image %}
-    <img class="img-fluid w-75" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-    {% else %}
-    <img class="img-fluid w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+<img
+  class="img-fluid w-75"
+  src="{{ item.product.image.url }}"
+  alt="{{ item.product.name }}"
+/>
+{% else %}
+<img
+  class="img-fluid w-75"
+  src="{{ MEDIA_URL }}noimage.png"
+  alt="{{ item.product.name }}"
+/>
 {% endif %}
 <h4 class="mt-3">{{ item.product.name }}</h4>

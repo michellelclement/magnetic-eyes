@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block content %} 
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %} 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
 {% endblock %}
@@ -178,26 +180,25 @@
     </div>
   </div>
 
-
-<div class="row">
-			<div class="col-12 col-lg-7 text-right mt-3">
-                {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-secondary">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span>Back to Profile</span>
-                    </a>
-                {% else %}
-                    <a href="{% url 'home' %}" class="btn btn-yellow">
-                        <span class="icon mr-2">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        <span>Back to the homepage</span>
-                    </a>
-                {% endif %}
-			</div>
-		</div>
+  <div class="row">
+    <div class="col-12 col-lg-7 text-right mt-3">
+      {% if from_profile %}
+      <a href="{% url 'profile' %}" class="btn btn-secondary">
+        <span class="icon mr-2">
+          <i class="fas fa-angle-left"></i>
+        </span>
+        <span>Back to Profile</span>
+      </a>
+      {% else %}
+      <a href="{% url 'home' %}" class="btn btn-yellow">
+        <span class="icon mr-2">
+          <i class="fas fa-home"></i>
+        </span>
+        <span>Back to the homepage</span>
+      </a>
+      {% endif %}
     </div>
+  </div>
+</div>
 
 {% endblock %}

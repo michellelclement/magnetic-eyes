@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-{% load static %} 
-{% block content %} 
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <!-- Jumbotron -->
 <div class="jumbotron-container product-jumbotron-section">
@@ -19,7 +17,8 @@
     <div class="col-12">
       <p>
         We believe in quality and style over quantity, which is why we have
-        worked on perfecting just a handfull of custom made lash styles. <br /><br />
+        worked on perfecting just a handfull of custom made lash styles.
+        <br /><br />
         Choose between a double magnet set or our newly launched triple magnet
         lashes, both in dramatic or subtle options.
       </p>
@@ -27,26 +26,28 @@
   </div>
 </div>
 
-
 <!-- Product Categories -->
 <div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <h4>Filter lashes by Category</h4>
-        </div>
+  <div class="row">
+    <div class="col text-center">
+      <h4>Filter lashes by Category</h4>
     </div>
+  </div>
 </div>
 
 <div class="container category-container">
-    <div class="row mb-5">
-        <div class="col text-center category-btns">
-            {% for c in current_categories %}
-			<a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-				<span class="btn-yellow">{{ c.friendly_name }}</span>
-			</a>
-			{% endfor %}
-        </div>
+  <div class="row mb-5">
+    <div class="col text-center category-btns">
+      {% for c in current_categories %}
+      <a
+        class="category-badge text-decoration-none"
+        href="{% url 'products' %}?category={{ c.name }}"
+      >
+        <span class="btn-yellow">{{ c.friendly_name }}</span>
+      </a>
+      {% endfor %}
     </div>
+  </div>
 </div>
 
 <!-- Products Content -->
@@ -78,43 +79,45 @@
       <!-- Card Body -->
       <div class="card-body pl-0">
         <a href="{% url 'product_detail' product.id %}">
-            <h4 class="card-title pb-0">{{ product.name }}</h4>
+          <h4 class="card-title pb-0">{{ product.name }}</h4>
         </a>
         {% if product.category %}
-            <p class="product-category">
-            <a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
-            </a>
-            </p>
+        <p class="product-category">
+          <a href="{% url 'products' %}?category={{ product.category.name }}"
+            >{{ product.category.friendly_name }}
+          </a>
+        </p>
         {% endif %}
         <p class="card-text">{{ product.price}}</p>
 
-      <!-- Edit / Delete buttons -->
-      
-      {% if request.user.is_superuser %}
+        <!-- Edit / Delete buttons -->
+
+        {% if request.user.is_superuser %}
         <small>
-            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+          <a href="{% url 'edit_product' product.id %}">Edit</a> |
+          <a class="text-danger" href="{% url 'delete_product' product.id %}"
+            >Delete</a
+          >
         </small>
         {% endif %}
+      </div>
     </div>
-          </div>
     {% endfor %}
   </div>
 </div>
 
 <!-- Back to top button -->
-    <div class="btt-button">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-circle-up"></i>
-        </a>	
-    </div>
+<div class="btt-button">
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>
+</div>
 
+{% endblock %} {% block postloadjs %}
+<!-- Back to top button script -->
+<script>
+  $(".btt-link").click(function (e) {
+    window.scrollTo(0, 0);
+  });
+</script>
 {% endblock %}
-{% block postloadjs %}
-    <!-- Back to top button script -->
-     <script>
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    {% endblock %}
