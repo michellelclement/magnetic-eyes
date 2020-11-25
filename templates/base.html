@@ -31,7 +31,6 @@
   </head>
 
   <body>
-
     <header>
       <!-- Free Delivery notification bar -->
       <div class="container-flex delivery-container">
@@ -65,69 +64,110 @@
           >
             <ul class="navbar-nav justify-content-start">
               <li class="nav-item {{ shop_page }}">
-                <a class="nav-link" aria-label="Shop" href="{% url 'products' %}">Shop</a>
+                <a
+                  class="nav-link"
+                  aria-label="Shop"
+                  href="{% url 'products' %}"
+                  >Shop</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-label="About" href="{% url 'about' %}#about">About</a>
+                <a
+                  class="nav-link"
+                  aria-label="About"
+                  href="{% url 'about' %}#about"
+                  >About</a
+                >
               </li>
               <li class="nav-item {{ application_page }}">
-                <a class="nav-link" aria-label="Application" href="{% url 'application' %}"
+                <a
+                  class="nav-link"
+                  aria-label="Application"
+                  href="{% url 'application' %}"
                   >Application</a
                 >
               </li>
               <li class="nav-item {{ contact_page }}">
-                <a class="nav-link" aria-label="Contact" href="{% url 'contact' %}">Contact</a>
+                <a
+                  class="nav-link"
+                  aria-label="Contact"
+                  href="{% url 'contact' %}"
+                  >Contact</a
+                >
               </li>
               <li class="nav-item {{ blog_page }}">
-                <a class="nav-link" aria-label="Blog" href="{% url 'blog' %}">Blog</a>
+                <a class="nav-link" aria-label="Blog" href="{% url 'blog' %}"
+                  >Blog</a
+                >
               </li>
-            <!-- My account section, mobile -->
-            <li class="nav-item dropdown my-account-mobile {{ myprofile_section }}">
-              <a
-                class="nav-link"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <!-- My account section, mobile -->
+              <li
+                class="nav-item dropdown my-account-mobile {{ myprofile_section }}"
               >
-                <div>
-                <p class="d-xl-block">My Account<i class="nav-link fas fa-user fa-lg ml-3"></i></p>
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  id="myaccount"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <div>
+                    <p class="d-xl-block">
+                      My Account<i class="nav-link fas fa-user fa-lg ml-3"></i>
+                    </p>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu border-0"
+                  aria-labelledby="myaccount"
+                >
+                  {% if request.user.is_authenticated %} 
+                  {% if request.user.is_superuser %}
+                  <a
+                    href="{% url 'add_product' %}"
+                    aria-label="Add a Product"
+                    class="dropdown-item"
+                    >Add a Product</a
+                  >
+                  {% endif %}
+                  <a
+                    href="{% url 'profile' %}"
+                    aria-label="My Profile"
+                    class="dropdown-item"
+                    >My Profile</a
+                  >
+                  <a
+                    href="{% url 'account_logout' %}"
+                    aria-label="Log out"
+                    class="dropdown-item"
+                    >Logout</a
+                  >
+                  {% else %}
+                  <a
+                    href="{% url 'account_signup' %}"
+                    aria-label="Register"
+                    class="dropdown-item"
+                    >Register</a
+                  >
+                  <a
+                    href="{% url 'account_login' %}"
+                    aria-label="Login"
+                    class="dropdown-item"
+                    >Login</a
+                  >
+                  {% endif %}
                 </div>
-              </a>
-              <div
-                class="dropdown-menu border-0"
-                aria-labelledby="user-options"
-              >
-                {% if request.user.is_authenticated %} 
-                {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item"
-                  >Add a Product</a
-                >
-                {% endif %}
-                <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item"
-                  >My Profile</a
-                >
-                <a href="{% url 'account_logout' %}" aria-label="Log out" class="dropdown-item"
-                  >Logout</a
-                >
-                {% else %}
-                <a href="{% url 'account_signup' %}" aria-label="Register" class="dropdown-item"
-                  >Register</a
-                >
-                <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item"
-                  >Login</a
-                >
-                {% endif %}
-              </div>
-            </li>
-
+              </li>
             </ul>
           </div>
         </div>
         <!-- Logo -->
         <div class="col-md-4 navbar-brand-col text-center">
-          <a class="navbar-brand" aria-label="Home" href="{% url 'home' %}">MAGNETIC EYES</a>
+          <a class="navbar-brand" aria-label="Home" href="{% url 'home' %}"
+            >MAGNETIC EYES</a
+          >
         </div>
 
         <!-- Cart & My Account Dropdown -->
@@ -150,25 +190,40 @@
               </a>
               <div
                 class="dropdown-menu border-0"
-                aria-labelledby="user-options"
+                aria-labelledby="myaccount"
               >
                 {% if request.user.is_authenticated %} 
                 {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" aria-label="Add a Product" class="dropdown-item"
+                <a
+                  href="{% url 'add_product' %}"
+                  aria-label="Add a Product"
+                  class="dropdown-item"
                   >Add a Product</a
                 >
                 {% endif %}
-                <a href="{% url 'profile' %}" aria-label="My Profile" class="dropdown-item"
+                <a
+                  href="{% url 'profile' %}"
+                  aria-label="My Profile"
+                  class="dropdown-item"
                   >My Profile</a
                 >
-                <a href="{% url 'account_logout' %}" aria-label="Logout" class="dropdown-item"
+                <a
+                  href="{% url 'account_logout' %}"
+                  aria-label="Logout"
+                  class="dropdown-item"
                   >Logout</a
                 >
                 {% else %}
-                <a href="{% url 'account_signup' %}" aria-label="Register" class="dropdown-item"
+                <a
+                  href="{% url 'account_signup' %}"
+                  aria-label="Register"
+                  class="dropdown-item"
                   >Register</a
                 >
-                <a href="{% url 'account_login' %}" aria-label="Login" class="dropdown-item"
+                <a
+                  href="{% url 'account_login' %}"
+                  aria-label="Login"
+                  class="dropdown-item"
                   >Login</a
                 >
                 {% endif %}
@@ -183,7 +238,8 @@
                 <div class="text-center nav-bag">
                   <div><i class="nav-link fas fa-shopping-bag fa-lg"></i></div>
                   <p class="d-none d-xl-block">
-                    {% if grand_total %} £{{ grand_total|floatformat:2 }} {% else %} £0.00 {% endif %}
+                    {% if grand_total %} £{{ grand_total|floatformat:2 }} 
+                    {% else %} £0.00 {% endif %}
                   </p>
                 </div>
               </a>
@@ -196,47 +252,47 @@
     <!-- Messages -->
     {% if messages %}
     <div class="message-container">
-      {% for message in messages %} {% with message.level as level %} {% if level == 40 %} {% include 'includes/toasts/toast_error.html' %} 
-      {% elif level == 30 %} {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %} {% include 'includes/toasts/toast_success.html' %} {% else %} {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %} {% endfor %}
+      {% for message in messages %} {% with message.level as level %} 
+      {% if level == 40 %} {% include 'includes/toasts/toast_error.html' %} 
+      {% elif level == 30 %} {% include 'includes/toasts/toast_warning.html' %} 
+      {% elif level == 25 %} {% include 'includes/toasts/toast_success.html' %} 
+      {% else%} {% include 'includes/toasts/toast_info.html' %} {% endif %} 
+      {% endwith%} {% endfor %}
     </div>
     {% endif %} {% block content %} {% endblock %}
-    
-
 
     <!-- Footer -->
     <footer>
       <div class="container-fluid footer-container text-center">
-        <div class="footer-logo">MAGNETIC EYES</div>
-        <div class="row">
-          <div class="col">
-            <ul class="list-inline social-links">
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.twitter.com/" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/" target="_blank">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="footer-logo">MAGNETIC EYES
         </div>
         <div class="row">
-          <div class="col">
-            <p>
-              Copyright Michelle L Clement 2020 | Website Designed & Built by
-              Michelle L Clement
-            </p>
-          </div>
+                <div class="col">
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </div>
-      </div>
+        <div class="row">
+                <div class="col">
+                    <p> Copyright Michelle L Clement 2020 | Website Designed & Built by Michelle L Clement</p>
+                </div>
+        </div>
+        </div>
     </footer>
 
     <!-- Optional JavaScript -->
@@ -261,13 +317,7 @@
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %} {% block extrameta %} {% endblock %} {% block extracss %} 
-    {% endblock %} 
-    
-    {% block extrajs %} 
-    
-    {% endblock %} 
-    
-    {% block postloadjs %}
+    {% endblock %} {% block extrajs %} {% endblock %} {% block postloadjs %}
     <!-- Toasts Scripts -->
     <script type="text/javascript">
       $(".toast").toast("show");
