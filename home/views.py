@@ -21,15 +21,6 @@ def application(request):
     return render(request, 'home/application.html', context)
 
 
-def contact(request):
-
-    context = {
-        'contact_page': 'active',
-    }
-
-    return render(request, '/contact.html', context)
-
-
 def about(request):
 
     return render(request, 'home')
