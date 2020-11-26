@@ -10,7 +10,6 @@
     </div>
   </div>
 </div>
-
 <!-- Products Intro Text -->
 <div class="container">
   <div class="row products-text-row">
@@ -34,7 +33,6 @@
     </div>
   </div>
 </div>
-
 <div class="container category-container">
   <div class="row mb-5">
     <div class="col text-center category-btns">
@@ -91,7 +89,6 @@
         <p class="card-text">{{ product.price}}</p>
 
         <!-- Edit / Delete buttons -->
-
         {% if request.user.is_superuser %}
         <small>
           <a href="{% url 'edit_product' product.id %}">Edit</a> |

@@ -12,7 +12,6 @@
       <h2>Checkout</h2>
     </div>
   </div>
-
   <div class="row">
     <!-- Order Summary -->
     <div class="col-12 col-lg-6 order-lg-last">
@@ -25,7 +24,6 @@
           <p>Subtotal</p>
         </div>
       </div>
-
       {% for item in bag_items %}
       <div class="row">
         <div class="col-2">
@@ -71,7 +69,6 @@
     <!-- checkout form header -->
     <div class="col-12 col-lg-6">
       <p>Please fill out the form below to complete your order.</p>
-
       <!-- Checkout form -->
       <form acition="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
@@ -80,7 +77,6 @@
           {{ order_form.full_name | as_crispy_field }} 
           {{ order_form.email | as_crispy_field }}
         </fieldset>
-
         <fieldset>
           <legend class="fieldset-label w-auto">Delivery</legend>
           {{ order_form.street_address1 | as_crispy_field }} 
@@ -124,7 +120,6 @@
             name="client_secret"
           />
         </fieldset>
-
         <!-- Submit Button -->
         <div class="submit-button mt-3">
           <a href="{% url 'view_bag' %}" class="btn btn-yellow">
