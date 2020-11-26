@@ -80,13 +80,12 @@
     padding-top: 20vh;
 }
 
-.application-row {
-    padding-top: 50px;
-    margin: 50px;
+.application-intro-container {
+    margin-top: 100px;
 }
 
-.application-row h2 {
-    padding-top: 50px;
+.application-row {
+    margin: 50px;
 }
 
 .application-container {
@@ -99,9 +98,6 @@
     margin: auto;
 }
 
-.application-content {
-    padding-top: 40px;
-}
 
 .application-content li {
     padding-bottom: 20px;
@@ -130,7 +126,10 @@
     .jumbotron-content {
         padding-top: 20vh;
     }
-
+    
+    .application-intro-container {
+    margin-top: 0px;
+    }
     .application-jumbotron-content h1,
     .jumbotron-content h1 {
     font-size: 2.75rem;
