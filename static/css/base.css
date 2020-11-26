@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html,
 body {
     font-family: 'Poppins', sans-serif;
@@ -143,6 +150,8 @@ h1 {
 /* Messages / Toasts */
 .message-container {
     position: fixed;
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
     max-width: min-content;
     min-width: 200px;
     top: 90px;
@@ -195,9 +204,14 @@ footer {
 /* All Products Page */
 
 .category-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .category-btns a {
@@ -253,30 +267,12 @@ footer {
     margin-bottom: 150px;
 }
 
-.favourites i {
-    color: red;
-    padding-left: 0px;
-    padding-right: 0.5rem;
-}
-
-.favourites a  {
-    color: #2C2C2C;
-}
 
 /* --------------------------------------- Bag page */
 
 .bag-container {
     margin-top: 150px;
 }
-
-/* ---------------------------------------- Favourites */
-
-
-.favourites-text-row {
-    padding-top: 50px;
-    margin: 50px;
-}
-
 
 /* ---------------------------------------- Contact */
 .contact-jumbotron-section {
@@ -391,7 +387,10 @@ footer {
 }
 
 .nav-bag-account {
-    flex-direction: unset;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
     }
 
 .my-account {
@@ -439,6 +438,8 @@ body {
 
 .message-container {
     position: fixed;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
     top: 150px;
     z-index: 99999;
