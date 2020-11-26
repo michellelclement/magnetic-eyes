@@ -1,4 +1,11 @@
-/* CSS Styling for Homepage, contact page and Application page */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* CSS Styling for Homepage and Application page */
 
 /* Homepage */
 .jumbotron-section {
@@ -151,16 +158,3 @@
         margin-top: 0;
     }
 }
-
-
-/* 
-@media only screen and (max-width: 600px) {
-
-    .intro-row,
-    .application-row {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        margin: 0px 30px;
-    }
-
-} */
