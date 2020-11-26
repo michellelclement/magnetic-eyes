@@ -31,4 +31,3 @@ def contactView(request):
 def successView(request):
 
     return render(request, "sendemail/contact_success.html")
-    # return HttpResponse('Success! Thank you for your message.')
