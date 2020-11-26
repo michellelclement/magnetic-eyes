@@ -68,7 +68,6 @@ New visitors to the website should be provided with the answers they need right 
 * As a new user, I want to be able to easily view all eyelashes available so that I can decide which product I might like to learn more about
 * As a new user, I want to be able to view details of a product so that I can learn more about that particular product
 * As a new user, I want to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future
-* As a shopper, I want to be able to contact the website owner so that I can ask them a question
 
 **Registered user, user stories:**
 
@@ -93,7 +92,8 @@ All shoppers of the website, new, returning or registered:
 * As a shopper, I want to be able to check out in a simple and easy way so that I can be confident my order has gone through with all my correct details
 * As a shopper, I want to be able to receive an order confirmation so that I can be sure my order has gone through.
 * As a shopper, I want to be able to learn more about Magnetic Eyes through blog articles, reviews and news, so that I can decide whether I want to buy their products
-* As a shopper, I want to be able to view the latest products added to the store so that I can buy view the newest products and purchase them if I wish
+* As a shopper, I want to be able to view the latest products added to the store so that I can view the newest products and purchase them if I wish
+* As a shopper, I want to be able to contact the website owner so that I can ask them a question
 
 ## The Site Owner:
 
@@ -278,3 +278,5 @@ In order to add a contact app (or sendemail) I used the following tutorial to do
 Special Thank you to my fantastic mentor ADEGBENGA ADEYE for all the help with this project.
 
 I would also like to extend my thanks to the Tutors who helped me solve many of my errors and times when I became a bit stuck. These include Igor, Johann, Samantha, Hevin, Hayley, Cormac and Roman.
+
+Additional thankyou’s to the slack members to took the time to test out my site and assist with some issues or errors they spotted. These include Clint, Lucyjpjones and Sean Mc.
