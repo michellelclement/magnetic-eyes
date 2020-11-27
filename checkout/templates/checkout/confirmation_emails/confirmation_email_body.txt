@@ -1,6 +1,6 @@
 Hello {{ order.full_name }}!
 
-Than you for your order from Magnetic Eyes Lashes!
+Thank you for your order from Magnetic Eyes Lashes!
 
 Details of your order is below:
 

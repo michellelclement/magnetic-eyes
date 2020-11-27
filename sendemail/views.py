@@ -11,19 +11,14 @@ def contactView(request):
         try:
             profile = UserProfile.objects.get(user=request.user)
             form = ContactForm(initial={
-                'email': profile.user.email,
+                'from_email': profile.user.email,
             })
         except UserProfile.DoesNotExist:
             form = ContactForm()
     else:
         form = ContactForm()
 
-    print(UserProfile)
-    print(form)
-
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
+    if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
