@@ -30,6 +30,7 @@
       {% for post in post_list %}
       <div class="card mb-4">
         <div class="card-body mt-2 mb-2">
+        <a href="{% url 'post_detail' post.slug  %}">
           {% if post.image %}
           <img
             class="card-img-top mb-3"
@@ -42,8 +43,11 @@
             src="{{ MEDIA_URL }}noimage.png"
             alt="{{ post.title }}"
           />
+          </a>
           {% endif %}
+          <a href="{% url 'post_detail' post.slug  %}">
           <h2 class="card-title">{{ post.title }}</h2>
+          </a>
           <p class="card-text text-muted h6">
             {{ post.author }} | {{ post.created_on}}
           </p>
