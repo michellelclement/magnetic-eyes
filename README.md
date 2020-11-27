@@ -277,6 +277,6 @@ In order to add a contact app (or sendemail) I used the following tutorial to do
 ## Acknowledgements
 Special Thank you to my fantastic mentor ADEGBENGA ADEYE for all the help with this project.
 
-I would also like to extend my thanks to the Tutors who helped me solve many of my errors and times when I became a bit stuck. These include Igor, Johann, Samantha, Hevin, Hayley, Cormac and Roman.
+I would also like to extend my thanks to the Tutors who helped me solve many of my errors and times when I became a bit stuck. These include Igor, Johann, Miklos, Samantha, Hevin, Hayley, Cormac and Roman.
 
 Additional thankyou’s to the slack members to took the time to test out my site and assist with some issues or errors they spotted. These include Clint, Lucyjpjones and Sean Mc.
