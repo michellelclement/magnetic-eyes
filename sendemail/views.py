@@ -2,9 +2,22 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import ContactForm
+from profiles.models import UserProfile
 
 
 def contactView(request):
+
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            form = ContactForm(initial={
+                'email': profile.user.email,
+            })
+        except UserProfile.DoesNotExist:
+            form = ContactForm()
+    else:
+        form = ContactForm()
+
     if request.method == 'GET':
         form = ContactForm()
     else:
