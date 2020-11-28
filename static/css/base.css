@@ -25,6 +25,10 @@ h1 {
     font-size: 3.5rem;
 }
 
+.toast-row {
+    margin: 0;
+}
+
 /* Buttons */
 
 .btn {
