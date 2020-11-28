@@ -4,75 +4,78 @@
 
 <!-- Post Detail -->
 <div class="container mb-5 mt-5">
-  <div class="row">
-    <div class="col-md-8 card">
-      <div class="card-body">
-        {% if post.image %}
-        <img
+	<div class="row">
+		<div class="col-md-8 card">
+			<div class="card-body">
+				{% if post.image %}
+				<img
           class="card-img-top mb-3"
           src="{{ post.image.url }}"
           alt="{{ post.title }}"
         />
         {% else %}
-        <img
+				<img
           class="card-img-top mb-3"
           src="{{ MEDIA_URL }}noimage.png"
           alt="{{ post.title }}"
         />
         {% endif %}
-        <h2>{% block title %} {{ post.title }} {% endblock title %}</h2>
-        <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text">{{ post.content | safe }}</p>
-      </div>
-
-      <!-- Comments Section -->
-      <div>
-        <div class="card-body">
-          <!-- comments -->
-          <h2>{{ comments.count }} comments</h2>
-          {% for comment in comments %}
-          <div class="comments" style="padding: 10px">
-            <p class="font-weight-bold">
-              {{ comment.name }}
-              <span class="text-muted font-weight-normal">
-                {{ comment.created_on }}
-              </span>
-            </p>
-            {{ comment.body | linebreaks }}
-            <hr />
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="col-md-8 card mb-4 mt-3">
-        <div class="card-body">
-          <!-- Add A comment -->
-          {% if new_comment %}
-          <div class="alert alert-success" role="alert">
-            Thank you! Your comment is awaiting moderation
-          </div>
-          {% else %}
-          <h4>Leave a comment</h4>
-          <form method="post">
-            {{ comment_form.as_p }} {% csrf_token %}
-            <button type="submit" class="btn btn-secondary btn-lg">
-              Submit Comment
-            </button>
-          </form>
-          {% endif %}
-        </div>
-      </div>
-
-      <!-- Back to blog button -->
-      <div class="col-12 mt-2 mb-4">
-        <a href="{% url 'blog' %}" class="btn btn-yellow">
-          <span class="icon">
+				<h2>{% block title %} {{ post.title }} {% endblock title %}</h2>
+				<p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+				<p class="card-text">{{ post.content | safe }}</p>
+			</div>
+			<!-- Back to blog button -->
+			<div class="col-12 mt-2 mb-4">
+				<a href="{% url 'blog' %}" class="btn btn-yellow">
+					<span class="icon">
             <i class="fas fa-chevron-left"></i>
           </span>
-          <span>Back to Blog</span>
-        </a>
-      </div>
-    </div>
-  </div>
+					<span>Back to Blog</span>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
+
+<!-- Comments -->
+
+<div class="container mb-5 mt-5">
+	<div class="row">
+		<div class="col-md-8 card">
+			<div class="card-body">
+				<h2>{{ comments.count }} comments</h2>
+				{% for comment in comments %}
+				<div class="comments" style="padding: 10px">
+					<p class="font-weight-bold">
+						{{ comment.name }}
+						<span class="text-muted font-weight-normal">
+                {{ comment.created_on }}
+              </span>
+					</p>
+					{{ comment.body | linebreaks }}
+					<hr />
+				</div>
+				{% endfor %}
+
+				<!-- Add A comment -->
+				{% if new_comment %}
+				<div class="alert alert-success" role="alert">
+					Thank you! Your comment is awaiting moderation
+				</div>
+				{% else %}
+				<h4>Leave a comment</h4>
+				<div class="comments" style="padding: 10px">
+					<form method="post">
+						{{ comment_form.as_p }} {% csrf_token %}
+						<button type="submit" class="btn btn-secondary btn-lg">
+              Submit Comment
+            </button>
+					</form>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
