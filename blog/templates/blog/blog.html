@@ -94,6 +94,7 @@
 
 {% endblock %} {% block postloadjs %}
 <!-- Back to top button script -->
+{{ block.super }}
 <script>
   $(".btt-link").click(function (e) {
     window.scrollTo(0, 0);
