@@ -333,6 +333,10 @@ footer {
     margin-top: 3rem;
 }
 
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
 /* Product Form */
 .btn-file {
     position: relative;
