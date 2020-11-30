@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 from .forms import CommentForm
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from profiles.models import UserProfile
 
 
 def all_posts(request):
@@ -31,7 +32,21 @@ def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
-    # Comment posted
+
+    # Pre-fill email fiend of authenticated user
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            comment_form = CommentForm(initial={
+                'email': profile.user.email,
+                })
+        except UserProfile.DoesNotExist:
+            comment_form = CommentForm()
+    else:
+        comment_form = CommentForm()
+
+    print(comment_form)
+    print(profile)
 
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
