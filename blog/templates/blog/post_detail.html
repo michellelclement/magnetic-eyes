@@ -3,9 +3,9 @@
 {% endblock %} {% block content %}
 
 <!-- Post Detail -->
-<div class="container mb-5 mt-5">
+<div class="container col-12 col-md-8 mb-5 mt-5">
 	<div class="row">
-		<div class="col-md-8 card">
+		<div class="card">
 			<div class="card-body">
 				{% if post.image %}
 				<img
@@ -39,9 +39,9 @@
 
 <!-- Comments -->
 
-<div class="container mb-5 mt-5">
+<div class="container col-12 col-md-8 mb-5 mt-5">
 	<div class="row">
-		<div class="col-md-8 card">
+		<div class="col card">
 			<div class="card-body">
 				<h2>{{ comments.count }} comments</h2>
 				{% for comment in comments %}
