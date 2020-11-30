@@ -6,6 +6,7 @@ Magnetic Eyes Lashes is a fully responsive, custom-built full-stack website, des
 
 You can view the live website here. [Magnetic Eyes Lashes](https://magnetic-eyes.herokuapp.com/)
 
+![Magnetic Eyes Homepage Mockups](static/readme_docs/macnetic_eyes.jpg)
 
 ## Contents
 1. [**Website Purpose**](#Website-Purpose)
@@ -119,7 +120,14 @@ They also want to be able to manage the site easily, with the ability to simply 
 
 
 ## Wireframes
+Using the user goals and user stories above, I put together several wireframes for Magnetic Eyes Lashes using Balsamiq. The wireframes cover mobile and desktop formats.
 
+**Changes to wireframes:** 
+During testing I decided that I on the Products(shop) page, an additional category button should be added so the user has a quick and simply was to go back to all products view after selecting a category. Before adding this button, users had to use the back button, so this new button made everything much more user friendly.
+
+You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
+
+![Wireframes](static/readme_docs/wireframes.jpg)
 
 
 ## Scope:
