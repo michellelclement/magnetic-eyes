@@ -33,21 +33,6 @@ def post_detail(request, slug):
     comments = post.comments.filter(active=True)
     new_comment = None
 
-    # Pre-fill email fiend of authenticated user
-    if request.user.is_authenticated:
-        try:
-            profile = UserProfile.objects.get(user=request.user)
-            comment_form = CommentForm(initial={
-                'email': profile.user.email,
-                })
-        except UserProfile.DoesNotExist:
-            comment_form = CommentForm()
-    else:
-        comment_form = CommentForm()
-
-    print(comment_form)
-    print(profile)
-
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -58,7 +43,17 @@ def post_detail(request, slug):
             # Save the comment to the database
             new_comment.save()
     else:
-        comment_form = CommentForm()
+        # Pre-fill email fiend of authenticated user
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                comment_form = CommentForm(initial={
+                    'email': profile.user.email,
+                    })
+            except UserProfile.DoesNotExist:
+                comment_form = CommentForm()
+        else:
+            comment_form = CommentForm()
 
     return render(request, template_name, {'post': post,
                                            'comments': comments,
