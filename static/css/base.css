@@ -134,7 +134,6 @@ h1 {
     padding: 0px 5px;
 }
 
-
 .nav-bag p {
     color: #7b7c7c!important;
 }
@@ -151,6 +150,7 @@ h1 {
     background-color: #f8f9fa;
     color: #7b7c7c;
 }
+
 /* Messages / Toasts */
 .message-container {
     position: fixed;
@@ -178,13 +178,16 @@ h1 {
 }
 
 .toast-header {
-    background-color: #2C2C2C;
     color: #F9F9F9;
 }
 
 .toast-close {
     color: #2C2C2C;
     opacity: 1;
+}
+
+.close {
+    font-size: 1.8rem;
 }
 
 /* Footer */
