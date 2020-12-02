@@ -56,6 +56,15 @@ INSTALLED_APPS = [
     'storages',
 ]
 
+SOCIALACCOUNT_PROVIDERS = {'facebook':
+                           {'METHOD': 'oauth2',
+                            'SCOPE': ['email'],
+                            'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+                            'LOCALE_FUNC': lambda request: 'en_US',
+                            'VERSION': 'v2.4'
+                            }
+                        }
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
