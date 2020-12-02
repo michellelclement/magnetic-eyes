@@ -125,6 +125,8 @@ Using the user goals and user stories above, I put together several wireframes f
 **Changes to wireframes:** 
 During testing I decided that I on the Products(shop) page, an additional category button should be added so the user has a quick and simply was to go back to all products view after selecting a category. Before adding this button, users had to use the back button, so this new button made everything much more user friendly.
 
+Additionally, I decided to add an extra feature of allowing users to be able to sign into the site using their Gmail account. This was not on the origial wireframes but I felt it a great addition to the site.
+
 You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 ![Wireframes](static/readme_docs/wireframes.jpg)
@@ -159,9 +161,9 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 **Back to the top on selected mobile pages:** Some pages of the website can become a little long on mobile. To help users with this I have added a ‘back to top’ button on these longer pages.
 
-**Blog**: A blog is a perfect way for the website owner to provide useful information to users. This could include new product news, makeup tips and reviews from bloggers etc. The blog has been paginated so that it does not become too long, and users can also leave comments below a blog post.
+**Blog:** A blog is a perfect way for the website owner to provide useful information to users. This could include new product news, makeup tips and reviews from bloggers etc. The blog has been paginated so that it does not become too long, and users can also leave comments below a blog post.
 
-**Sign in with Google** 
+**Sign in with Google:** These days, a user expects to be able to log into websites using other accounts such as social media. Therefore, I decided to add a ‘Sign in with Google’ option. If a user signs in this way, they email address gets added to the Admin of the site.
 
 
 ## Features to add in the future:
