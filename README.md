@@ -299,6 +299,7 @@ In order to implement my brand new modules, I followed the following tutorials, 
 [Blog App](https://djangocentral.com/building-a-blog-application-with-django/)
 [Blog Comments](https://djangocentral.com/creating-comments-system-with-django/)
 [Blog Pagination](https://djangocentral.com/adding-pagination-with-django/)
+[BSign In With Google](https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5)
 
 **SendEmail (Contact Us) App Tutorial**
 In order to add a contact app (or sendemail) I used the following tutorial to do so. I made some small amends, such as using Crispy Form instead of the suggested.
