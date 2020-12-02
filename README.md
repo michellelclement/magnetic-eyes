@@ -161,6 +161,8 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 **Blog**: A blog is a perfect way for the website owner to provide useful information to users. This could include new product news, makeup tips and reviews from bloggers etc. The blog has been paginated so that it does not become too long, and users can also leave comments below a blog post.
 
+**Sign in with Google** 
+
 
 ## Features to add in the future:
 

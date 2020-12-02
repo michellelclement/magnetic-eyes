@@ -351,6 +351,12 @@ footer {
     display: none;
 }
 
+
+.google-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Product Form */
 .btn-file {
     position: relative;
