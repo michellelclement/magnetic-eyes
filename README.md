@@ -171,6 +171,24 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 
 ## Schema Design
+After careful consideration and taking into account all the different parts of the website and needs of the database, I designed the schema in 5 main sections/models:
+
+**user_profile:** These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
+
+**order:** This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
+
+**order_line_items:** This includes details of each product the user orders, the details of each product are linked to the products section.
+
+**products:** This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category. Products can only be added by a Superuser/Authenticated user.
+
+**category:** Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
+
+**blog:** This section is non-relational to the rest of the database, and it holds details of the blog posts including the blog title, author, status, image, image_url and the post itself. The blog can only be added by a Superuser/Authenticated user.
+
+**blog Comment:** If a user is signed into their account and they wish to leave a comment on the blog, the email field required in the form will be linked to their account and pre-filled with the user’s email. The blog comment models also require a name, comment body, date it was created on and the active status (published or draft).
+
+![Wireframes](static/readme_docs/schema.png)
+
 
 ## Testing
 
@@ -188,7 +206,7 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 ## Tools Used
 * [Balsamiq](https://balsamiq.com/) - Used to create my wireframes, showing the positioning of elements on varying screen sizes.
-* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - 
+* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Use to create the banner images with gradients, the favicon and the square yellow images on the homepage and application pages.
 * [W3C HTML Validator](https://validator.w3.org/) - I used this tool to check the validity of my HTML code.
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I used this tool to check the validity of my CSS code.
 * [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes of my CSS code.
@@ -199,7 +217,7 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 ## Deployment to Heroku
 Once I got Magnetic Eyes to its MVP, I decided to deploy the project to Heroku so I could see, test and update the site in real-time. Here is my deployment process.
 
-Read the full deployment process here. 
+You can view the full deployment process [here](static/readme_docs/deployment.pdf)
 
 
 ## Clone The Repository
