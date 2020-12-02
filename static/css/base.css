@@ -451,6 +451,18 @@ body {
     padding: 0;
 }
 
+.contact-jumbotron-section {
+    background: url('/media/contact-banner-mob.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.product-jumbotron-section {
+    background: url('/media/products-banner-mob.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+}
+
 .product-jumbotron-content,
 .contact-jumbotron-content,
 .blog-jumbotron-content {

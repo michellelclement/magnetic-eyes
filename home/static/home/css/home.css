@@ -127,9 +127,20 @@
         padding-top: 20vh;
     }
     
+    .jumbotron-section {
+    background: url('/media/homepage-banner-mob.jpg') no-repeat center center;
+    background-size: cover;
+    }
+
+    .application-jumbotron-section {
+    background: url('/media/application-banner-mob.jpg') no-repeat center center;
+    background-size: cover;
+}
+    
     .application-intro-container {
     margin-top: 0px;
     }
+
     .application-jumbotron-content h1,
     .jumbotron-content h1 {
     font-size: 2.75rem;
