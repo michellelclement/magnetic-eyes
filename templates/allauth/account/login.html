@@ -45,4 +45,6 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <button class="btn-secondary primaryAction" type="submit">{% trans "Sign In" %}</button>
 </form>
 
+ <a href="{% provider_login_url 'google' %}">Login with Google</a>
+
 {% endblock %}
