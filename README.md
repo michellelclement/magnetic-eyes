@@ -21,12 +21,13 @@ You can view the live website here. [Magnetic Eyes Lashes](https://magnetic-eyes
 7. [**Testing**](#testing)
 8. [**Technologies and Services Used**](#technologies-and-services-used)
     -  [**Tools Used**](#tools-used)
-9. [**Deployment**](#deployment-to-heroku)
-10. [**Repository Clone**](#clone-the-repository)
-11. [**Secrey Key & Key Variables**](#secret-key-&-key-variables)
-12. [**Design**](#design)
-13. [**Credits**](#credits)
-14. [**Acknowledgements**](#acknowledgements)
+9. [**Authentication**](#authentication)    
+10. [**Deployment**](#deployment-to-heroku)
+11. [**Repository Clone**](#clone-the-repository)
+12. [**Secrey Key & Key Variables**](#secret-key-&-key-variables)
+13. [**Design**](#design)
+14. [**Credits**](#credits)
+15. [**Acknowledgements**](#acknowledgements)
 
 
 
@@ -251,6 +252,18 @@ To view the Registered User Story testing, website shopper user story testing an
 * [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes of my CSS code.
 * [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
 
+
+## Authentication
+
+The website authentication is provided by Django App Allauth. 
+
+A user must follow the instructions on the ‘Register’ page (enter an email address, username and password) and then confirm their email address via the email they receive. Once this has been completed, only then can they sign into the website. 
+
+**Log in with Google**
+
+As users expect to be able to sign in with multiple options, I decided to add a way for the user to sign in with their Google Account. By clicking on the Google logo on the Sign In page, they are taken to the familiar Google sign-in page. 
+
+With a signed-in profile, users can save their delivery details to use again in the future and view their order history. If a signed-in user also wants to submit a comment on a blog, or contact the website owner via the contact form, their email address will be pre-filled on those pages.
 
 
 ## Deployment to Heroku
