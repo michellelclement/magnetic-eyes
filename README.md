@@ -6,7 +6,8 @@ Magnetic Eyes Lashes is a fully responsive, custom-built full-stack website, des
 
 You can view the live website here. [Magnetic Eyes Lashes](https://magnetic-eyes.herokuapp.com/)
 
-![Magnetic Eyes Homepage Mockups](static/readme_docs/macnetic_eyes.jpg)
+![Magnetic Eyes Homepage Mockups](static/readme_docs/magnetic_eyes.jpg)
+
 
 ## Contents
 1. [**Website Purpose**](#Website-Purpose)
@@ -62,6 +63,7 @@ The audience which the website targets are mostly, but not exclusively, female, 
 
 ## User Stories
 
+
 **New user, user stories**
 
 New visitors to the website should be provided with the answers they need right away. These include:
@@ -71,6 +73,7 @@ New visitors to the website should be provided with the answers they need right 
 * As a new user, I want to be able to view details of a product so that I can learn more about that particular product
 * As a new user, I want to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future
 
+
 **Registered user, user stories:**
 
 Registered users of the website will be provided with additional features which non-registered users will not benefit from. 
@@ -78,6 +81,7 @@ Registered users of the website will be provided with additional features which 
 * As a registered user, I want to be able to easily update my profile information so that I can update my personal details
 * As a registered user, I want to be able to view my past orders so that I can keep track of my orders with the site
 * As a registered user, I want to be able to have my delivery details prefilled so that I can save time in entering my details
+
 
 **Website shopper user stories:**
 
@@ -96,6 +100,7 @@ All shoppers of the website, new, returning or registered:
 * As a shopper, I want to be able to view the latest products added to the store so that I can view the newest products and purchase them if I wish
 * As a shopper, I want to be able to contact the website owner so that I can ask them a question
 
+
 ## The Site Owner:
 
 The owner of the website wants to be able to sell their products is the easiest way possible. They also want to be able to educate and support the buyer with information on how these products work and how to use them, since they are different from the normal glue on false lashes.
@@ -107,6 +112,7 @@ They also want to be able to manage the site easily, with the ability to simply 
 * Add, remove and update products
 * Update the website with news and tips
 
+
 **Site owner user stories:**
 * As the site owner, I want to be able to easily list my products to sell so that I can sell new products to my users.
 * As the site owner, I want to be able to update my product listings so that I can make sure the information is correct or amendments can be made.
@@ -117,6 +123,7 @@ They also want to be able to manage the site easily, with the ability to simply 
 * As the site owner, I want to be able to inform visitors of news and tips so that I can keep users returning and buying new products.
 * As the site owner, I want to be able to offer visitors free delivery based on a minimum amount ordered so that I can increase revenue and product sales via an incentive to the customer.
 * As a shopper, I want to be able to sort the products available on the site by category so that I can view just the products in that category.
+
 
 ## Wireframes
 Using the user goals and user stories above, I put together several wireframes for Magnetic Eyes Lashes using Balsamiq. The wireframes cover mobile and desktop formats.
@@ -197,7 +204,7 @@ After careful consideration and taking into account all the different parts of t
 
 For this project, I put the website through some vigorous testing. This included testing manually myself, by a friend, by my Mentor and also by the slack community in the peer-code review page.
 
-User Story Testing
+**User Story Testing**
 
 Due to the length of the user story testing, I have saved all of this on a separate document which you can view [here](static/readme_docs/user_story_tesitng.pdf), as well as added some of the new user stories below.
 
@@ -208,18 +215,22 @@ Due to the length of the user story testing, I have saved all of this on a separ
 * Intro text: Beneath the Jumbotron is a short introduction which explains what Magnetic Eyes are about.
 * Additionally, a user can head to the blog to read articles on Magnetic Eyes and its products.
  
+
 *As a new user, I want to be able to understand how Magnetic Lashes work so that I can learn what the product is about and how to use them*
 * A user can quickly and easily learn more about how Magnetic Lashes work by clicking on one of two main navigation options which are both immediately available when the user lands on the site:
 * Application: This link takes the user to a page which explains how to apply magnetic eyelashes.
 * About: This link takes the user down to an anchor on the homepage which explains more information about magnetic eyelashes and how they work.
  
+
 *As a new user, I want to be able to easily view all eyelashes available so that I can decide which product I might like to learn more about*
 * In the main navigation, the first item a user can see is ‘Shop’ – this link takes the user to the main shop page which displays all the products there are for sale. By clicking on one of those products, the user is taken to a product detail page to read more about that item.
 * Additionally, on the homepage, there are 3 CTA’s to take the user to the shop.
 
+
 *As a new user, I want to be able to view the details of a product so that I can learn more about that particular product* 
 * When a user clicks to view an item, either by clicking the item image or item name, they are taken to a product details page.
 * On this page, they will be able to learn more about the product as well as add their desired quantity of that item to the bag.
+
 
 *As a new user, I want to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future*
 * In the main navigation (or in the mobile toggler menu) a user can easily find the ‘My Account’ name and icon. This link provides a dropdown prompting a user to log in or register for an account.
@@ -316,7 +327,7 @@ I wanted to create a modern yet slightly funky website, whilst keeping a simple 
 
 For the main body font, I decided to use Poppins Regular, as this complemented permanent Marker nicely and was clean and easy to read. I also made Sans Serif the fallback font for Poppins.
 
-** Brand**
+**Brand**
 
 For the main brand, or logo, I went for a simple, font based logo with custom spacing. The letter-spacing is 5.6px on a desktop which reduces to 3.5 on mobile and uses the font Poppins in all capitals. 
 
@@ -340,16 +351,22 @@ Light Pink: #ff8fea
 * Banner images: These images were from free stocksites [Pexels](https://www.pexels.com/discover/) and [Unsplash](https://unsplash.com/) and overlaid with a purple gradient design.
 * Product images: All product images were taken by myself and are of my own products I used to sell.
 * Homepage & Application page photos and video: All images and videos were taken and created by myself. The photo of the eye is my eye.
-* [No Image Icon](https://www.freeiconspng.com/)
+* No Image: [No Image Icon](https://www.freeiconspng.com/) provided the image for when a product does not have an image associated with it.
 
 **Blog Implementation Tutorial**
+
 In order to implement my brand new modules, I followed the following tutorials, with some additions of my own (such as adding images)
+
 [Blog App](https://djangocentral.com/building-a-blog-application-with-django/)
+
 [Blog Comments](https://djangocentral.com/creating-comments-system-with-django/)
+
 [Blog Pagination](https://djangocentral.com/adding-pagination-with-django/)
-[BSign In With Google](https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5)
+
+[Sign In With Google](https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5)
 
 **SendEmail (Contact Us) App Tutorial**
+
 In order to add a contact app (or sendemail) I used the following tutorial to do so. I made some small amends, such as using Crispy Form instead of the suggested.
 [Django Email Contact Form](https://learndjango.com/tutorials/django-email-contact-form)
 
