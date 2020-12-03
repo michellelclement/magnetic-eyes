@@ -159,11 +159,15 @@ h1 {
     z-index: 99999;
 }
 
-.toast-header,
-.close {
+.toast-header {
     color: #2C2C2C;
     font-size: 18px;
+}
+
+.close {
+    color: #2C2C2C;
     opacity: 1;
+    text-shadow: none;
 }
 
 .toast-header-success {
