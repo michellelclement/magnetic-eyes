@@ -77,7 +77,6 @@ Registered users of the website will be provided with additional features which 
 * As a registered user, I want to be able to easily update my profile information so that I can update my personal details
 * As a registered user, I want to be able to view my past orders so that I can keep track of my orders with the site
 * As a registered user, I want to be able to have my delivery details prefilled so that I can save time in entering my details
-* As a registered user, I want to be able to save my preferred payment details so that I can save time ordering in the future
 
 **Website shopper user stories:**
 
@@ -113,11 +112,10 @@ They also want to be able to manage the site easily, with the ability to simply 
 * As the site owner, I want to be able to easily delete product listings so that I can remove items I no longer wish to sell.
 * As the site owner, I want to be able to make it as easy as possible for users to purchase my products so that I can give them a great service, sell my products, and build a customer base
 * As the site owner, I want to be able to teach website visitors about magnetic eyelashes so that I can sell them my products.
-* As the site owner, I want to be able to run reports so that I can find out top-selling products, top customers and sales over certain periods.
 * As the site owner, I want to be able to send auto emails to users so that I can inform them of successful registration and order confirmation.
 * As the site owner, I want to be able to inform visitors of news and tips so that I can keep users returning and buying new products.
-
-
+* As the site owner, I want to be able to offer visitors free delivery based on a minimum amount ordered so that I can increase revenue and product sales via an incentive to the customer.
+* As a shopper, I want to be able to sort the products available on the site by category so that I can view just the products in that category.
 
 ## Wireframes
 Using the user goals and user stories above, I put together several wireframes for Magnetic Eyes Lashes using Balsamiq. The wireframes cover mobile and desktop formats.
@@ -195,6 +193,43 @@ After careful consideration and taking into account all the different parts of t
 
 
 ## Testing
+
+For this project, I put the website through some vigorous testing. This included testing manually myself, by a friend, by my Mentor and also by the slack community in the peer-code review page.
+
+User Story Testing
+
+Due to the length of the user story testing, I have saved all of this on a separate document which you can view [here](static/readme_docs/user_story_tesitng.pdf), as well as added some of the new user stories below.
+
+
+*As a new user, I want to be able to learn more about Magnetic Eyes lashes so that I can get to know the brand* 
+* When a user lands on the website, they are met with a couple of options to find out more about Magnetic Eyes Lashes:
+* Navigation item ‘About’: This navigation item links the user further down the homepage so they can read more about the products.
+* Intro text: Beneath the Jumbotron is a short introduction which explains what Magnetic Eyes are about.
+* Additionally, a user can head to the blog to read articles on Magnetic Eyes and its products.
+ 
+*As a new user, I want to be able to understand how Magnetic Lashes work so that I can learn what the product is about and how to use them*
+* A user can quickly and easily learn more about how Magnetic Lashes work by clicking on one of two main navigation options which are both immediately available when the user lands on the site:
+* Application: This link takes the user to a page which explains how to apply magnetic eyelashes.
+* About: This link takes the user down to an anchor on the homepage which explains more information about magnetic eyelashes and how they work.
+ 
+*As a new user, I want to be able to easily view all eyelashes available so that I can decide which product I might like to learn more about*
+* In the main navigation, the first item a user can see is ‘Shop’ – this link takes the user to the main shop page which displays all the products there are for sale. By clicking on one of those products, the user is taken to a product detail page to read more about that item.
+* Additionally, on the homepage, there are 3 CTA’s to take the user to the shop.
+
+*As a new user, I want to be able to view the details of a product so that I can learn more about that particular product* 
+* When a user clicks to view an item, either by clicking the item image or item name, they are taken to a product details page.
+* On this page, they will be able to learn more about the product as well as add their desired quantity of that item to the bag.
+
+*As a new user, I want to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future*
+* In the main navigation (or in the mobile toggler menu) a user can easily find the ‘My Account’ name and icon. This link provides a dropdown prompting a user to log in or register for an account.
+* Upon clicking Register, the user is taken to a page to register for an account by filling in their email, username and choosing a password.
+* The rest of the process to confirm their email is clearly guided. The user is told they will receive an email to confirm their email address. Once this is link is clicked, they will be taken to the homepage and be informed via a notification that they have successfully signed up to Magnetic Eyes.
+* In order to save their details for faster purchasing, when they make their first order they can choose to save those details to their account using the check box provided.
+* If a user is at the checkout point without having registered for an account thus far, they will be prompted that they can do so at this point, where the checkbox is replaced with a login/register link.
+
+To view the Registered User Story testing, website shopper user story testing and site owner user story testing, please view the full document [here.](static/readme_docs/user_story_tesitng.pdf)
+
+
 
 ## Technologies and Services Used
 * [HTML](https://html.com/)
