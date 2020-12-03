@@ -25,9 +25,6 @@ h1 {
     font-size: 3.5rem;
 }
 
-.toast-row {
-    margin: 0;
-}
 
 /* Buttons */
 
@@ -152,43 +149,27 @@ h1 {
 }
 
 /* Messages / Toasts */
+
 .message-container {
     position: fixed;
-    max-width: -webkit-min-content;
-    max-width: -moz-min-content;
     max-width: min-content;
-    min-width: 200px;
-    top: 90px;
-    right: 15px;
+    min-width: 250px;
+    top: 130px;
+    right: 30px;
     z-index: 99999;
+}
+
+.toast-header,
+.close {
+    color: #2C2C2C;
+    font-size: 18px;
+    opacity: 1;
 }
 
 .toast-header-success {
     background-color: #FF8FEA;
-    color: #2C2C2C;
-    font-size: 20px;
 }
 
-.toast-header {
-    font-size: 20px;
-}
-
-.toast-body {
-    font-size: 16px;
-}
-
-.toast-header {
-    color: #F9F9F9;
-}
-
-.toast-close {
-    color: #2C2C2C;
-    opacity: 1;
-}
-
-.close {
-    font-size: 1.8rem;
-}
 
 /* Footer */
 
@@ -476,16 +457,6 @@ body {
     padding-bottom: 15vh
 }
 
-.message-container {
-    position: fixed;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    top: 150px;
-    z-index: 99999;
-    left: 35px;
-    right: 40px;
-    }
 
 .btt-button {
     display: block;
