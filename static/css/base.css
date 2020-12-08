@@ -460,6 +460,7 @@ body {
     position: fixed;
     transform: translate(-50%, 0px);
     z-index: 9999;
+    overflow-wrap: break-word;
 }
 
 .contact-jumbotron-section {
