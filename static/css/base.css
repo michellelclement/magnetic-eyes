@@ -358,12 +358,17 @@ footer {
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-color: red;
+    border-color: #7b7c7c;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: red;
-    border-color: red;
+    background-color: #7b7c7c;
+    border-color: #7b7c7c;
+}
+
+.remove-image-checkbox-text {
+    color: #7b7c7c;
+    font-size: 0.75rem;
 }
 
 /* ------------------------------------------- Media Queries */
