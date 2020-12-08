@@ -281,6 +281,15 @@ footer {
     margin-top: 150px;
 }
 
+/* --------------------------------------- Checkout */
+#id_country {
+    padding: 5px 12px;
+}
+
+#payment-form {
+    color: #2C2C2C;
+}
+
 /* ---------------------------------------- Contact */
 .contact-jumbotron-section {
     background: url('/media/contact-banner.png') no-repeat center center;
