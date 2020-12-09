@@ -241,6 +241,52 @@ Due to the length of the user story testing, I have saved all of this on a separ
 
 To view the Registered User Story testing, website shopper user story testing and site owner user story testing, please view the full document [here.](static/readme_docs/user_story_tesitng.pdf)
 
+**Manual Testing**
+
+I manually tested the entire website across 3 desktop browsers (Chrome, Safari and Firefox) on tablet on 2 browsers (Chrome and Safari) and an iPhone on two browsers (Chrome and Safari).
+
+The results of this testing can be found in the following document [here](static/readme_docs/testing.pdf),
+
+
+**W3C CSS Validator**
+
+I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS code.
+* Two Bootstrap errors did occur, which I was advised to ignore. 
+* All of my code otherwise passes without any errors
+
+
+
+**W3C HTML Validator**
+
+I used the [W3C HTML Validator](https://validator.w3.org) to check the validity of my HTML code
+
+The Shop page and Bag page issued a warning to consider adding H2-H6 headers but I didn’t feel this was necessary on these pages as it did not add anything to the page and there are headers in the section above.
+ 
+All other code passed with no errors.
+
+
+**PEP8 Compliant Testing**
+
+Each and every .py file has been check over to make sure it complies with PEP8 formatting rules, both manually in the Gitpod window, as well as running the code through POP8online.com.
+
+There are no errors through the PEP8 check, however there are a couple of highlighted rows of code where I have decided not to make the suggested corrections:
+
+*‘Avoid using null=True on string based fields.’*
+Pages with error: Blog>models.py & products>models.py
+I have left this error as it is a string path to a source file.
+
+*‘Avoid using null=True on string based fields.’*
+Pages with error: checkout>models.py, profiles>models.py, product>models.py
+
+*‘Line too long’*
+Pages with error: settings.py, checkout>webhooks.py, checkout>webhook_handler.py, checkout>models.py
+These have been left as is as these lines should not be broken.
+
+*'checkout.signals' imported but unused*
+Page with error: checkout>apps.py
+This ‘error’ has been left. This code is needed, and if removed the order total and grand totals appear as £0. 
+
+
 
 
 ## Technologies and Services Used
