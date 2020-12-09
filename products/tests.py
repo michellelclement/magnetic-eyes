@@ -25,3 +25,11 @@ class TestProductForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('price', form.errors.keys())
         self.assertEqual(form.errors['price'][0], 'This field is required.')
+
+
+class TestViews(TestCase):
+
+    def test_view_products(self):
+        response = self.client.get('/products/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/products.html')

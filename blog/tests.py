@@ -1,5 +1,6 @@
 from django.test import TestCase
 from blog.forms import CommentForm
+from blog.models import Post
 
 
 class TestCommentForm(TestCase):
@@ -19,3 +20,15 @@ class TestCommentForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('body', form.errors.keys())
         self.assertEqual(form.errors['body'][0], 'This field is required.')
+
+
+class TestViews(TestCase):
+
+    def test_view_all_posts(self):
+        response = self.client.get('/blog/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog/blog.html')
+
+
+class TestModels(TestCase):
+    

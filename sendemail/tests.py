@@ -21,3 +21,11 @@ class TestContactForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('message', form.errors.keys())
         self.assertEqual(form.errors['message'][0], 'This field is required.')
+
+
+class TestViews(TestCase):
+
+    def test_view_contact_form(self):
+        response = self.client.get('/contact/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'sendemail/contact.html')
