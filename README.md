@@ -129,9 +129,9 @@ They also want to be able to manage the site easily, with the ability to simply 
 Using the user goals and user stories above, I put together several wireframes for Magnetic Eyes Lashes using Balsamiq. The wireframes cover mobile and desktop formats.
 
 **Changes to wireframes:** 
-During testing I decided that I on the Products(shop) page, an additional category button should be added so the user has a quick and simply was to go back to all products view after selecting a category. Before adding this button, users had to use the back button, so this new button made everything much more user friendly.
+During testing, I decided that I on the Products(shop) page, an additional category button should be added so the user has a quick and simply was to go back to all products view after selecting a category. Before adding this button, users had to use the back button, so this new button made everything much more user friendly.
 
-Additionally, I decided to add an extra feature of allowing users to be able to sign into the site using their Gmail account. This was not on the origial wireframes but I felt it a great addition to the site.
+Additionally, I decided to add an extra feature of allowing users to be able to sign in to the site using their Gmail account. This was not on the original wireframes but I felt it a great addition to the site.
 
 You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
@@ -169,7 +169,7 @@ You can view all the wireframes [here](static/readme_docs/wireframes.pdf)
 
 **Blog:** A blog is a perfect way for the website owner to provide useful information to users. This could include new product news, makeup tips and reviews from bloggers etc. The blog has been paginated so that it does not become too long, and users can also leave comments below a blog post.
 
-**Sign in with Google:** These days, a user expects to be able to log into websites using other accounts such as social media. Therefore, I decided to add a ‘Sign in with Google’ option. If a user signs in this way, they email address gets added to the Admin of the site.
+**Sign in with Google:** These days, a user expects to be able to log into websites using other accounts such as social media. Therefore, I decided to add a ‘Sign in with Google’ option. If a user signs in this way, their email address gets added to the Admin of the site.
 
 
 ## Features to add in the future:
@@ -269,7 +269,7 @@ All other code passed with no errors.
 
 Each and every .py file has been check over to make sure it complies with PEP8 formatting rules, both manually in the Gitpod window, as well as running the code through POP8online.com.
 
-There are no errors through the PEP8 check, however there are a couple of highlighted rows of code where I have decided not to make the suggested corrections:
+There are no errors through the PEP8 check. However, there are a couple of highlighted rows of code where I have decided not to make the suggested corrections:
 
 *‘Avoid using null=True on string based fields.’*
 Pages with error: Blog>models.py & products>models.py
@@ -421,4 +421,4 @@ Special Thank you to my fantastic mentor ADEGBENGA ADEYE for all the help with t
 
 I would also like to extend my thanks to the Tutors who helped me solve many of my errors and times when I became a bit stuck. These include Igor, Johann, Miklos, Samantha, Hevin, Hayley, Cormac and Roman.
 
-Additional thankyou’s to the slack members to took the time to test out my site and assist with some issues or errors they spotted. These include Clint, Lucyjpjones and Sean Mc.
+Additional thankyou’s to the slack members to took the time to test out my site and assist with some issues or errors they spotted. These include Kasia, Clint, Lucyjpjones and Sean Mc.
