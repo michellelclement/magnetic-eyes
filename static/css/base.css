@@ -333,6 +333,11 @@ footer {
     padding-bottom: 50px;
     margin: 50px;
 }
+
+#id_body {
+    width: 100%;
+}
+
 /* ------------------------------------ Account Pages */
 
 /* All Auth Styling */
@@ -509,6 +514,7 @@ body {
     padding-bottom: 50px;
     margin: 50px 0px;
     }
+
 
 .products-text-row {
     margin: 1rem;
