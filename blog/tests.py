@@ -1,6 +1,5 @@
 from django.test import TestCase
 from blog.forms import CommentForm
-from blog.models import Post
 
 
 class TestCommentForm(TestCase):
@@ -28,7 +27,3 @@ class TestViews(TestCase):
         response = self.client.get('/blog/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog/blog.html')
-
-
-class TestModels(TestCase):
-    

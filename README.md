@@ -248,6 +248,18 @@ I manually tested the entire website across 3 desktop browsers (Chrome, Safari a
 The results of this testing can be found in the following document [here](static/readme_docs/testing.pdf),
 
 
+**Automated Testing**
+
+In addition to the full manual testing, I also decided to add some automated testing, as advised in the short testing section of the course.
+
+I created 20 automated tests in total. These include:
+* Blog>tests.py: Comment form testing and blog view testing
+* Checkout>tests.py: Order form testing
+* Products>tests.py: Product form testing and Product page view test
+* Sendemail>tests.py: Contact form testing and view test
+
+
+
 **W3C CSS Validator**
 
 I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS code.
