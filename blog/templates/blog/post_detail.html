@@ -5,9 +5,9 @@
 <!-- Post Detail -->
 <div class="container">
 	<div class="row">
-    <div class="col-12 col-md-8 mb-5 mt-5">
+    <div class="col-md-8 offset-md-2 mt-3">
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body post-card-body">
 				{% if post.image %}
 				<img
           class="card-img-top mb-3"
@@ -26,7 +26,8 @@
 				<p class="card-text">{{ post.content | safe }}</p>
 			</div>
             <!-- Back to blog button -->
-			<div class="row">
+			<div class="container">
+            <div class="row">
             <div class="col-12 mt-2 mb-4">
 				<a href="{% url 'blog' %}" class="btn btn-yellow">
 					<span class="icon">
@@ -36,15 +37,17 @@
 				</a>
 			</div>
             </div>
+            </div>
 		</div>
     </div>
 	</div>
 </div>
 
 <!-- Comments -->
-<div class="container col-12 col-md-8 mb-5 mt-5">
+<div class="container">
 	<div class="row">
-		<div class="col card">
+		<div class="col col-md-8 offset-md-2 mt-3">
+        <div class="card">
 			<div class="card-body">
 				<h2>{{ comments.count }} comments</h2>
 				{% for comment in comments %}

@@ -334,6 +334,10 @@ footer {
     margin: 50px;
 }
 
+.post-card-body {
+    margin-bottom: 25px;
+}
+
 #id_body {
     width: 100%;
 }
