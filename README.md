@@ -277,6 +277,17 @@ The Shop page and Bag page issued a warning to consider adding H2-H6 headers but
 All other code passed with no errors.
 
 
+
+**JSHint**
+
+All JS code has been run through JS hint to check for errors. Whilst there were no errors with my code, two errors were appearing in the checker:
+
+Undefined variable: $ : According to a Tutor, the reason for this error is that JSHint isn’t designed to pick up a jQuery syntax
+
+Undefined variable: Stripe : This is a value being pulled in from the settings which I am advised cannot be checked by JSHint.
+
+
+
 **PEP8 Compliant Testing**
 
 Each and every .py file has been check over to make sure it complies with PEP8 formatting rules, both manually in the Gitpod window, as well as running the code through POP8online.com.
@@ -320,7 +331,7 @@ This ‘error’ has been left. This code is needed, and if removed the order to
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I used this tool to check the validity of my CSS code.
 * [Autoprefixed](https://autoprefixer.github.io/) - I used this tool to check the prefixes of my CSS code.
 * [PEP8](http://pep8online.com/) - I used this tool to check that my python files meet the PEP8 requirements.
-
+* [JSHint]( https://jshint.com/- I used this tool to check for errors in my JavaScript code.
 
 ## Authentication
 
