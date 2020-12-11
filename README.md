@@ -372,7 +372,6 @@ The variables needed in your local repo are:
 * STRIPE_PUBLIC_KEY
 * STRIPE_SECRET_KEY
 * STRIPE_WH_SECRET
-* STRIPE_WH_SECRET
 
 If you add your variables in an env.py then **do not commit this page**. You will be making those variables available to the public. Instead, first you must create a file named .gitignore with the contents simply .env.py
 
